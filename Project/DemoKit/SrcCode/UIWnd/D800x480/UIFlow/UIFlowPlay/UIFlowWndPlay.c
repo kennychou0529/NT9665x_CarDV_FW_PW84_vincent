@@ -275,10 +275,10 @@ INT32 UIFlowWndPlay_OnOpen(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
 
     //disable auto power off in this mode 
     #if(_MODEL_DSC_==_MODEL_DUAL_AONI328_)//vincent@20150914-3
-        Ux_SendEvent(&UISetupObjCtrl, NVTEVT_EXE_POWEROFF, 1, POWER_ON);
+        /* Ux_SendEvent(&UISetupObjCtrl, NVTEVT_EXE_POWEROFF, 1, POWER_ON); */
         Ux_SendEvent(&UISetupObjCtrl, NVTEVT_EXE_LCDOFF, 1, LCDOFF_ON);//vincent@20150914-5
     #endif
-
+    
     Ux_DefaultEvent(pCtrl,NVTEVT_OPEN_WINDOW,paramNum,paramArray);
     return NVTEVT_CONSUME;
 }
@@ -326,7 +326,7 @@ INT32 UIFlowWndPlay_OnClose(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray
 
     //Enable auto power off before leaving this mode
     #if(_MODEL_DSC_==_MODEL_DUAL_AONI328_)//vincent@20150914-3
-        Ux_SendEvent(&UISetupObjCtrl, NVTEVT_EXE_POWEROFF, 1, SysGetFlag(FL_AUTO_POWER_OFF));
+        /*Ux_SendEvent(&UISetupObjCtrl, NVTEVT_EXE_POWEROFF, 1, SysGetFlag(FL_AUTO_POWER_OFF));*/
         Ux_SendEvent(&UISetupObjCtrl, NVTEVT_EXE_LCDOFF, 1, SysGetFlag(FL_LCDOffIndex));//vincent@20150914-5
     #endif
     
@@ -1134,6 +1134,7 @@ INT32 UIFlowWndPlay_OnKeyEnter(VControl *pCtrl, UINT32 paramNum, UINT32 *paramAr
                 }
                 FlowPB_IconDrawMovPlay(TRUE);
                 g_PlbData.State = PLB_ST_PLAY_MOV;
+				UI_LockAutoPWROff(); //stop power-save counting
 
             }
             break;
@@ -1222,13 +1223,12 @@ INT32 UIFlowWndPlay_OnMovieFinish(VControl *pCtrl, UINT32 paramNum, UINT32 *para
     //#NT#2012/08/31#Calvin Chang -end
 
     FlowPB_UpdateIcons(1);
-
+	UI_UnlockAutoPWROff(); //start power-save counting
     return NVTEVT_CONSUME;
 }
 INT32 UIFlowWndPlay_OnMovieOneSec(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
 {
     FlowPB_IconDrawMovPlayTime(TRUE);
-
     return NVTEVT_CONSUME;
 }
 INT32 UIFlowWndPlay_OnStorageInit(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)

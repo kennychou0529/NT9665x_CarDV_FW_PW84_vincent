@@ -160,7 +160,7 @@ int Setup_MenuCallback(UINT32 uiMessage, UINT32 uiParam)
         case IDM_AUTO_POWER_OFF:
             #if(_MODEL_DSC_==_MODEL_DUAL_AONI328_)//vincent@20150914-2
             SysSetFlag(FL_AUTO_POWER_OFF,uwOption);
-            if ((SysGetFlag(FL_MOVIE_MOTION_DET) == MOVIE_MOTIONDET_OFF) && (PRIMARY_MODE_PLAYBACK != System_GetState(SYS_STATE_CURRMODE)))//vincent@20150914-3 
+            if (SysGetFlag(FL_MOVIE_MOTION_DET) == MOVIE_MOTIONDET_OFF )//vincent@20150914-3 
             {
                 Ux_SendEvent(&UISetupObjCtrl, NVTEVT_EXE_POWEROFF, 1, uwOption);
             }

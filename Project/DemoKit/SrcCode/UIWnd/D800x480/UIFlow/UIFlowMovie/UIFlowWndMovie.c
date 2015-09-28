@@ -1704,6 +1704,10 @@ INT32 UIFlowWndMovie_OnBattery(VControl *pCtrl, UINT32 paramNum, UINT32 *paramAr
     } else {
         UxCtrl_SetShow(&UIFlowWndMovie_Status_batteryCtrl,TRUE);
     }
+	if(BATTERY_EMPTY == GetBatteryLevel())
+	{
+		Ux_PostEvent(NVTEVT_PWR_BATTEMPTY, 0);
+	}
 
     return NVTEVT_CONSUME;
 }

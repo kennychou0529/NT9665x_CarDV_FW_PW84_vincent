@@ -55,7 +55,8 @@ void UISound_Play(UINT32 index)
         return;
     }
 
-    if (UI_GetData(FL_BEEP)== BEEP_ON)
+    /*if (UI_GetData(FL_BEEP)== BEEP_ON)*/
+    if ((UI_GetData(FL_BEEP)== BEEP_ON) || (index==DEMOSOUND_SOUND_POWERON_TONE))/* magic_328 20150928 */
     {
         GxSound_Play(index);
     }

@@ -163,6 +163,8 @@ BOOL g_bSpeLockFun = FALSE;
 _ALIGNED(4)  GPSDATA gpsdata={0};
 BOOL g_bgsensor = FALSE;
 
+static BOOL bGsensorTrig=FALSE;//vincent@20150812-1
+
 extern int SX_TIMER_DET_GSENSOR_ID;
 extern int SX_TIMER_DET_AUTOLCDOFF_ID;
 
@@ -1829,7 +1831,7 @@ INT32 UIFlowWndMovie_OnMovieFinish(VControl *pCtrl, UINT32 paramNum, UINT32 *par
 INT32 UIFlowWndMovie_OnMovieOneSec(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
 {
   static volatile BOOL bRecordShow = FALSE;
-  static BOOL bGsensorTrig=FALSE;
+  //static BOOL bGsensorTrig=FALSE;
   
   UINT32 uiRecSecond, uiCyclicRecTime;
 

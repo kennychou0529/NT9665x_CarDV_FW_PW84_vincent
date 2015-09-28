@@ -75,22 +75,16 @@ INT32 UIMenuWndSetupCarNumber_OnClose(VControl *, UINT32, UINT32 *);
 INT32 UIMenuWndSetupCarNumber_OnKeyShutter2(VControl *, UINT32, UINT32 *);
 INT32 UIMenuWndSetupCarNumber_OnKeyEnter(VControl *, UINT32, UINT32 *);
 INT32 UIMenuWndSetupCarNumber_OnKeyMode(VControl *, UINT32, UINT32 *);
-INT32 UIMenuWndSetupCarNumber_OnReverseGear(VControl *, UINT32, UINT32 *);
-
 EVENT_BEGIN(UIMenuWndSetupCarNumber)
 EVENT_ITEM(NVTEVT_OPEN_WINDOW,UIMenuWndSetupCarNumber_OnOpen)
 EVENT_ITEM(NVTEVT_CLOSE_WINDOW,UIMenuWndSetupCarNumber_OnClose)
 #if((_MODEL_DSC_ == _MODEL_CARDV_B50_)||(_MODEL_DSC_== _MODEL_DUAL_NAZHIDA_))
 EVENT_ITEM(NVTEVT_KEY_CUSTOM1,UIMenuWndSetupCarNumber_OnKeyShutter2)
-#elif(_MODEL_DSC_ == _MODEL_DUAL_790S_)
-EVENT_ITEM(NVTEVT_KEY_MENU,UIMenuWndSetupCarNumber_OnKeyShutter2)
 #else
-EVENT_ITEM(NVTEVT_KEY_SHUTTER2,UIMenuWndSetupCarNumber_OnKeyShutter2)
+EVENT_ITEM(NVTEVT_KEY_MENU,UIMenuWndSetupCarNumber_OnKeyShutter2)
 #endif
 EVENT_ITEM(NVTEVT_KEY_ENTER,UIMenuWndSetupCarNumber_OnKeyEnter)
 EVENT_ITEM(NVTEVT_KEY_MODE,UIMenuWndSetupCarNumber_OnKeyMode)
-EVENT_ITEM(NVTEVT_REVERSEGEAR,UIMenuWndSetupCarNumber_OnReverseGear)
-
 EVENT_END
 
 static void UIMenuWndSetupCarNumber_UpdateInfo(void)
@@ -153,7 +147,19 @@ INT32 UIMenuWndSetupCarNumber_OnClose(VControl *pCtrl, UINT32 paramNum, UINT32 *
     Ux_DefaultEvent(pCtrl,NVTEVT_CLOSE_WINDOW,paramNum,paramArray);
     return NVTEVT_CONSUME;
 }
+INT32 UIMenuWndSetupCarNumber_OnKeyShutter2(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
+{
+	int i;
 
+	for (i=0; i<CARNO_LEN; i++)
+	{
+		CarNoBuf[i] = CarNoShow[i][0];
+	}
+	CarNoBuf[i] = '\0';
+	SysSetZHCarNoStamp(CarNoBuf);
+	Ux_CloseWindow(pCtrl, 0);
+    return NVTEVT_CONSUME;
+}
 INT32 UIMenuWndSetupCarNumber_OnKeyEnter(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
 {
     return UIMenuWndSetupCarNumber_OnKeyShutter2(pCtrl, paramNum, paramArray);
@@ -172,11 +178,6 @@ INT32 UIMenuWndSetupCarNumber_OnKeyMode(VControl *pCtrl, UINT32 paramNum, UINT32
 	Ux_SendEvent(&UISetupObjCtrl,NVTEVT_EXE_CHANGEDSCMODE,1,DSCMODE_CHGTO_NEXT);
     return NVTEVT_CONSUME;
 }
-INT32 UIMenuWndSetupCarNumber_OnReverseGear(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
-{
-       Ux_CloseWindow(&MenuCommonItemCtrl,0); // close whole tab menu
-       return NVTEVT_CONSUME;	
-}
 //----------------------UIMenuWndSetupCarNumber_TabCtrl Event---------------------------
 INT32 UIMenuWndSetupCarNumber_Tab_OnKeyUp(VControl *, UINT32, UINT32 *);
 INT32 UIMenuWndSetupCarNumber_Tab_OnKeyDown(VControl *, UINT32, UINT32 *);
@@ -188,30 +189,8 @@ EVENT_ITEM(NVTEVT_KEY_UP,UIMenuWndSetupCarNumber_Tab_OnKeyUp)
 EVENT_ITEM(NVTEVT_KEY_DOWN,UIMenuWndSetupCarNumber_Tab_OnKeyDown)
 EVENT_ITEM(NVTEVT_KEY_LEFT,UIMenuWndSetupCarNumber_Tab_OnKeyLeft)
 EVENT_ITEM(NVTEVT_KEY_RIGHT,UIMenuWndSetupCarNumber_Tab_OnKeyRight)
-#if(_MODEL_DSC_ == _MODEL_DUAL_790S_)
 EVENT_ITEM(NVTEVT_KEY_SHUTTER2,UIMenuWndSetupCarNumber_Tab_OnKeyMenu)
-#else
-EVENT_ITEM(NVTEVT_KEY_MENU,UIMenuWndSetupCarNumber_Tab_OnKeyMenu)
-#endif
 EVENT_END
-
-
-INT32 UIMenuWndSetupCarNumber_OnKeyShutter2(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
-{
-	int i;
-	for (i=0; i<CARNO_LEN; i++)
-	{
-		CarNoBuf[i] = CarNoShow[i][0];
-	}
-	CarNoBuf[i] = '\0';
-	SysSetZHCarNoStamp(CarNoBuf);
-#if(_MODEL_DSC_ == _MODEL_DUAL_AONI328_)//vincent@20150919-3
-    UIMenuWndSetupCarNumber_Tab_OnKeyRight(pCtrl, paramNum, paramArray);
-#else
-	Ux_CloseWindow(pCtrl, 0);
-#endif
-    return NVTEVT_CONSUME;
-}
 
 static void _update_Tab_Button_index(VControl *pCtrl, int derc)
 {
@@ -298,12 +277,7 @@ INT32 UIMenuWndSetupCarNumber_Tab_OnKeyRight(VControl *pCtrl, UINT32 paramNum, U
 }
 INT32 UIMenuWndSetupCarNumber_Tab_OnKeyMenu(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
 {
-    #if(_MODEL_DSC_ == _MODEL_DUAL_AONI328_)//vincent@20150919-3
-	Ux_CloseWindow(pCtrl, 0);
-    #else
 	UIMenuWndSetupCarNumber_Tab_OnKeyRight(pCtrl, paramNum, paramArray);
-    #endif
-    
     return NVTEVT_CONSUME;
 }
 //----------------------UIMenuWndSetupCarNumber_Button1Ctrl Event---------------------------

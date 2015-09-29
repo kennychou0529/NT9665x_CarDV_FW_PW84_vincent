@@ -308,7 +308,7 @@ void GPIOMap_TurnOnWhiteLight(void)
 }
 void GPIOMap_TurnOffWhiteLight(void)
 {
-	gpio_clearPin(GPIO_WHITE_LIGHT);
+	//gpio_clearPin(GPIO_WHITE_LIGHT);
 }
 
 BOOL GPIOMap_IsWhiteLightOn(void)

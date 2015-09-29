@@ -335,7 +335,7 @@ void GxSystem_BootStart(void)
 	 #else
         GxLED_SetCtrl(KEYSCAN_LED_GREEN,TURNON_LED,TRUE);
 	 #endif	 
-        GxLED_SetCtrl(KEYSCAN_LED_RED,TURNON_LED,FALSE);
+        GxLED_SetCtrl(KEYSCAN_LED_RED,TURNON_LED,TRUE);
 
     //TM_Begin(BOOT_START);
     //TM_End(BOOT_START);

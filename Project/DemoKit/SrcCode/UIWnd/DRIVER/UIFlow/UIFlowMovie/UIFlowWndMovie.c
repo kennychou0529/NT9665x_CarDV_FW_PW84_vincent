@@ -34,6 +34,9 @@
 
 #include "DxOutput.h"//vincent@20150916-3
 
+static BOOL bGsensorTrig=FALSE;
+
+
 //---------------------UIFlowWndMovieCtrl Control List---------------------------
 CTRL_LIST_BEGIN(UIFlowWndMovie)
 CTRL_LIST_ITEM(UIFlowWndMovie_Static_camera)
@@ -880,7 +883,7 @@ INT32 UIFlowWndMovie_OnOpen(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray
     #if (GPS_FUNCTION == ENABLE)//vincent@20150806-1	
     //GPIOMap_TurnOnGPSPower();	
     #endif
-	
+	GxLED_SetCtrl(KEYSCAN_LED_RED,TURNON_LED,TRUE);
     Ux_DefaultEvent(pCtrl,NVTEVT_OPEN_WINDOW,paramNum,paramArray);
     return NVTEVT_CONSUME;
 }
@@ -1642,7 +1645,6 @@ INT32 UIFlowWndMovie_OnMovieFinish(VControl *pCtrl, UINT32 paramNum, UINT32 *par
 INT32 UIFlowWndMovie_OnMovieOneSec(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
 {
   static volatile BOOL bRecordShow = FALSE;
-  static BOOL bGsensorTrig=FALSE;
   
   UINT32 uiRecSecond, uiCyclicRecTime;
 
@@ -2402,6 +2404,7 @@ INT32 UIFlowWndMovie_LcdOnOff(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArr
     if (paramArray[0] == 0)
     {
         GxLED_SetCtrl(KEYSCAN_LED_RED,SET_TOGGLE_LED,TRUE);
+		GxLED_SetCtrl(KEYSCAN_LED_RED,TURNON_LED,FALSE); 
         GxLED_SetCtrl(KEYSCAN_LED_GREEN,SET_TOGGLE_LED,FALSE);
         GxLED_SetCtrl(KEYSCAN_LED_GREEN,TURNON_LED,FALSE);  
     }

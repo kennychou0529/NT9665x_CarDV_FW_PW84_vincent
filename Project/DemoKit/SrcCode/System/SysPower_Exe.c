@@ -808,7 +808,7 @@ void UI_DetGsensor(void)
     		            {
                             //debug_msg("vincent@20150814 gsensor shift:Ux_PostEvent(NVTEVT_RECORDING_MODE_TRIG, 1, 0)\r\n");
     		                Ux_PostEvent(NVTEVT_RECORDING_MODE_TRIG, 1, 0);
-                            	           
+                            GPIOMap_TurnOnLCDBacklight();	           
     		                bNormalFlag = TRUE;
     		            }	
                     }

@@ -1970,6 +1970,7 @@ INT32 MovieExe_OnCyclicRec(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
     if (uiSelect != MOVIE_CYCLICREC_OFF)
     {
         MediaRec_ChangeParameter(MEDIAREC_RECPARAM_CUTSEC, uiCyclicRecTime, 0, 0);
+		MediaRec_ChangeParameter(MEDIAREC_RECPARAM_ENDTYPE, MEDIAREC_ENDTYPE_CUTOVERLAP, 0, 0);
     }
     else
     {

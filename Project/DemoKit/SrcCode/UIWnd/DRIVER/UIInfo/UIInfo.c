@@ -44,7 +44,7 @@
 #include "Cal_Api.h"
 #include "CalibrationAPI.h"
 #endif
-
+#include "DxPower.h"
 //---------------------UIInfo Debug Definition -----------------------------
 #define _UIINFO_ERROR_MSG        1
 #define _UIINFO_TRACE_MSG        0
@@ -361,7 +361,8 @@ UINT32 GetBatteryLevel(void)
     {
         guiBatteryLevel = BATTERY_CHARGE;
     } else {
-        switch (GxPower_GetControl(GXPWR_CTRL_BATTERY_LEVEL))
+        //switch (GxPower_GetControl(GXPWR_CTRL_BATTERY_LEVEL))
+        switch (DrvPower_GetControl(DRVPWR_CTRL_BATTERY_LEVEL))
         {
           case VOLDET_BATTERY_LVL_4:
                guiBatteryLevel = BATTERY_FULL;

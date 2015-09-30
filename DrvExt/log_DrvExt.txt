@@ -1,0 +1,9 @@
+In file included from e:/workspace/NT9665x_CarDV_FW_PW84_vincent/DrvExt/DrvExt_src/ModelExt/CarDV_K12/IOCfg.c:29:
+../../../../Include/DrvExt/GSensor/GSensor.h:118: warning: function declaration isn't a prototype
+../../../../Include/DrvExt/GSensor/GSensor.h:119: warning: function declaration isn't a prototype
+../../../../Include/DrvExt/GSensor/GSensor.h:120: warning: function declaration isn't a prototype
+In file included from e:/workspace/NT9665x_CarDV_FW_PW84_vincent/DrvExt/DrvExt_src/ModelExt/CarDV_K12/DxInput_Key.c:27:
+../../../../Include/DrvExt/GSensor/GSensor.h:118: warning: function declaration isn't a prototype
+../../../../Include/DrvExt/GSensor/GSensor.h:119: warning: function declaration isn't a prototype
+../../../../Include/DrvExt/GSensor/GSensor.h:120: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_vincent/DrvExt/DrvExt_src/ModelExt/CarDV_K12/DxInput_Key.c:166: warning: 'VolDet_GetKey2Level' defined but not used

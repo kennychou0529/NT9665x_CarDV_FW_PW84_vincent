@@ -82,7 +82,7 @@ char gFWExternalVersion[33]="A10.IMX322.2015.0716.V0.1";
 #elif(_MODEL_DSC_==_MODEL_DUAL_89M3_)
 char gFWExternalVersion[33]="M3.2015.0803.V0.2";
 #elif(_MODEL_DSC_==_MODEL_DUAL_D333_)
-char gFWExternalVersion[33]="D333.2015.0925.V0.1";
+char gFWExternalVersion[33]="D333.2015.0930.V0.1";
 #elif(_MODEL_DSC_ == _MODEL_CARDV_K12_)
 char gFWExternalVersion[33]="k12.2015.0923.V0.1";
 #elif(_MODEL_DSC_ == _MODEL_DUAL_SAIBOSHI_)

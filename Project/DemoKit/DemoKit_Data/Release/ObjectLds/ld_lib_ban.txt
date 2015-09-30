@@ -1,0 +1,1 @@
+../../ARC/Common/Release/Startup.a ../../ARC/Drv/Release/Driver_IPP.a ../../ARC/Drv/Release/Driver_Codec.a ../../ARC/Lib/Release/GxGfx.a ../../ARC/Lib/Release/GxStrg.a 

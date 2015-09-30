@@ -548,11 +548,11 @@ void Movie_SetRecParam(void)
     }
     else
     {
-        #if 1
+        #if 0
         MediaRec_ChangeParameter(MEDIAREC_RECPARAM_ENDTYPE, MEDIAREC_ENDTYPE_NORMAL, 0, 0);
         #else
         MediaRec_ChangeParameter(MEDIAREC_RECPARAM_ENDTYPE, MEDIAREC_ENDTYPE_CUT_TILLCARDFULL, 0, 0);
-        MediaRec_ChangeParameter(MEDIAREC_RECPARAM_CUTSEC, 600, 0, 0); // 25 min
+        MediaRec_ChangeParameter(MEDIAREC_RECPARAM_CUTSEC, 1500, 0, 0); // 25 min
         #endif
     }
 

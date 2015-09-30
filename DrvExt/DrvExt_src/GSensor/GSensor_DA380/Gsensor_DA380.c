@@ -21,7 +21,7 @@ extern short g_stGsenX;
 extern short g_stGsenY;
 extern short g_stGsenZ;
 
-#define LAPSE_REC_TRIG_VALUE   (17)  //vincent@20150805-1
+#define LAPSE_REC_TRIG_VALUE   (16)  //vincent@20150805-1
 static GSENSOR_SENSITIVITY g_GSensorSensitivity = GSENSOR_SENSITIVITY_OFF;
 static BOOL gbCrashMode=FALSE;
 

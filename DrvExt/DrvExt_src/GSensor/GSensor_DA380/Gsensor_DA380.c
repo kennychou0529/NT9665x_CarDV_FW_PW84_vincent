@@ -165,7 +165,7 @@ int mir3da_open_interrupt(int num){
 
 	res = mir3da_register_write(NSA_REG_INTERRUPT_SETTINGS1,0x03);
 	res = mir3da_register_write(NSA_REG_ACTIVE_DURATION,0x01 );// 0x03
-	res = mir3da_register_write(NSA_REG_ACTIVE_THRESHOLD,0x26 );////DEBUG//38//DF
+	res = mir3da_register_write(NSA_REG_ACTIVE_THRESHOLD,0x20 );////DEBUG//38//DF
 	res = mir3da_register_write(NSA_REG_INTERRUPT_SETTINGS2,0xA0); // interuppt plus  keep 1 second //vincent@20150917-1
 			
 	switch(num){
@@ -381,13 +381,13 @@ static UINT32 GSensor_DA380_GetSensitivityLevel(void)
 			DA380Threshold =32768;
 			break;
 		case GSENSOR_SENSITIVITY_LOW:
-			DA380Threshold =1600;//25
+			DA380Threshold =3000;//25
 			break;
 		case GSENSOR_SENSITIVITY_MED:
-			DA380Threshold =1400;//20
+			DA380Threshold =2000;//20
 			break;
 		case GSENSOR_SENSITIVITY_HIGH:
-			DA380Threshold =800;//16
+			DA380Threshold =1400;//16
 			break;
 		default:
 			DA380Threshold =0xFF;

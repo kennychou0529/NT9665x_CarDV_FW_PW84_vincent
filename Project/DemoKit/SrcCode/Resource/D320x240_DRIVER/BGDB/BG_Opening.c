@@ -29,7 +29,7 @@
 #include "Goodbye.c"
 #else
 #include "welcome.c"
-#include "Goodbye.c"
+#include "k12a.c"
 
 //#include "xianzhi_open.c"
 //#include "xianzhi_close.c"

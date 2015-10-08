@@ -21,7 +21,7 @@ extern short g_stGsenX;
 extern short g_stGsenY;
 extern short g_stGsenZ;
 
-#define LAPSE_REC_TRIG_VALUE   (16)  //vincent@20150805-1
+#define LAPSE_REC_TRIG_VALUE   (17)  //vincent@20150805-1
 static GSENSOR_SENSITIVITY g_GSensorSensitivity = GSENSOR_SENSITIVITY_OFF;
 static BOOL gbCrashMode=FALSE;
 
@@ -381,13 +381,13 @@ static UINT32 GSensor_DA380_GetSensitivityLevel(void)
 			DA380Threshold =32768;
 			break;
 		case GSENSOR_SENSITIVITY_LOW:
-			DA380Threshold =3000;//25
+			DA380Threshold =3500;//25
 			break;
 		case GSENSOR_SENSITIVITY_MED:
-			DA380Threshold =2000;//20
+			DA380Threshold =2200;//20
 			break;
 		case GSENSOR_SENSITIVITY_HIGH:
-			DA380Threshold =1400;//16
+			DA380Threshold =1500;//16
 			break;
 		default:
 			DA380Threshold =0xFF;

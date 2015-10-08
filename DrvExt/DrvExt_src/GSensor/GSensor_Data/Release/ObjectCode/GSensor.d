@@ -1,12 +1,12 @@
 GSensor_Data/Release/ObjectCode/GSensor.o: \
- e:/NT9665x_CarDV_FW_20150122_PW84_vincent/DrvExt/DrvExt_src/GSensor/GSensor.c \
+ e:/workspace/NT9665x_CarDV_FW_PW84_vincent/DrvExt/DrvExt_src/GSensor/GSensor.c \
  ../../../Include/Common/Type.h ../../../Include/Common/StdCMac.h \
  ../../../Include/Common/Platform.h \
  ../../../Include/Common/Kernel/mIType.h \
  ../../../Include/Drv/Driver_Sys/i2c.h \
  ../../../Include/Drv/Driver_Sys/Driver.h \
  ../../../Include/DrvExt/GSensor/GSensor.h \
- e:/NT9665x_CarDV_FW_20150122_PW84_vincent/DrvExt/DrvExt_src/GSensor/GSensor_Int.h \
+ e:/workspace/NT9665x_CarDV_FW_PW84_vincent/DrvExt/DrvExt_src/GSensor/GSensor_Int.h \
  ../../../Include/Common/Debug/DebugModule.h \
  ../../../Include/Common/OS/SysKer.h \
  ../../../Include/Common/Kernel/Kernel.h \
@@ -47,7 +47,7 @@ GSensor_Data/Release/ObjectCode/GSensor.o: \
 
 ../../../Include/DrvExt/GSensor/GSensor.h:
 
-e:/NT9665x_CarDV_FW_20150122_PW84_vincent/DrvExt/DrvExt_src/GSensor/GSensor_Int.h:
+e:/workspace/NT9665x_CarDV_FW_PW84_vincent/DrvExt/DrvExt_src/GSensor/GSensor_Int.h:
 
 ../../../Include/Common/Debug/DebugModule.h:
 

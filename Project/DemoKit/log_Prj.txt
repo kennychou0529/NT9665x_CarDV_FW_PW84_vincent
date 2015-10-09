@@ -1,0 +1,545 @@
+In file included from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/main.c:19:
+../../Include/DrvExt/GSensor/GSensor.h:118: warning: function declaration isn't a prototype
+../../Include/DrvExt/GSensor/GSensor.h:119: warning: function declaration isn't a prototype
+../../Include/DrvExt/GSensor/GSensor.h:120: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from ./SrcCode/UIWnd/D800x480/UIFlow.h:21,
+                 from ./SrcCode/UIConfig.h:6,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain.c:40:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain.c: In function 'SysInit_ResetShutDownTimerHdl':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain.c:234: warning: implicit declaration of function 'rtc_getPWRStatus'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain.c:238: warning: implicit declaration of function 'Gsensor_ClearCrashMode'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain.c:239: warning: implicit declaration of function 'GSensor_ParkingMode'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain.c:243: warning: implicit declaration of function 'rtc_poweroffPWR'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain.c:256: warning: implicit declaration of function 'rtc_resetShutdownTimer'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain.c: In function 'UserMainProc':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain.c:365: warning: implicit declaration of function 'GSensor_open'
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain_Exe.c:16:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain_Exe.c: In function 'System_OnShutdown':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain_Exe.c:525: warning: implicit declaration of function 'GPIOMap_IsLCDBacklightOn'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain_Exe.c:528: warning: implicit declaration of function 'GPIOMap_TurnOnLCDBacklight'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain_Exe.c:529: warning: implicit declaration of function 'System_ResetPowerSaveCount'
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain_Flow_Init.c:24:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain_Flow_Exit.c:24:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysMain_Flow_Sleep.c:24:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysCmdCB.c:48:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysOutput_Exe.c:16:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysVideo_Exe.c:16:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysVideo_Exe.c: In function 'System_OnVideoAttach':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysVideo_Exe.c:1180: warning: "ANIMATION_POWER_ON" is not defined
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysVideo_Exe.c:1213: warning: "ANIMATION_POWER_ON" is not defined
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysVideo_Exe.c:1144: warning: unused variable 'index'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysVideo_Exe.c:1143: warning: unused variable 'szSectionID'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysVideo_Exe.c: In function 'UI_ShowJPG':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysVideo_Exe.c:1451: warning: unused variable 'GxImgFMT'
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysAudio_Exe.c:16:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysUsb_Exe.c:16:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysUsb_Exe.c: In function 'System_OnUsbRemove':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysUsb_Exe.c:254: warning: implicit declaration of function 'USB_UnPlugSetFunc'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysUsb_Exe.c: At top level:
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysUsb_Exe.c:300: warning: conflicting types for 'USB_UnPlugSetFunc'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysUsb_Exe.c:254: note: previous implicit declaration of 'USB_UnPlugSetFunc' was here
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysStrg_Exe.c:40:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysStrg_Exe.c: In function 'Card_SingleInsert':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysStrg_Exe.c:470: warning: unused variable 'szRootDir'
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:16:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:43:
+../../Include/DrvExt/GSensor/GSensor.h:118: warning: function declaration isn't a prototype
+../../Include/DrvExt/GSensor/GSensor.h:119: warning: function declaration isn't a prototype
+../../Include/DrvExt/GSensor/GSensor.h:120: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c: In function 'UI_DetPwrKey':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:457: warning: implicit declaration of function 'rtc_getPWRStatus'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:460: warning: implicit declaration of function 'rtc_resetShutdownTimer'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:473: warning: implicit declaration of function 'Gsensor_SetInterrupt'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:532: warning: implicit declaration of function 'GPIOMap_IsLCDBacklightOn'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:534: warning: implicit declaration of function 'GPIOMap_TurnOnLCDBacklight'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:538: warning: implicit declaration of function 'GPIOMap_TurnOffLCDBacklight'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:541: warning: implicit declaration of function 'System_ResetPowerSaveCount'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c: In function 'UI_DetCustomerModeKey':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:666: warning: unused variable 'uiUpKeyPressCount'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:665: warning: unused variable 'uiUpState'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:664: warning: unused variable 'uiUpKey'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:662: warning: unused variable 'uiDownKeyPressCount'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:661: warning: unused variable 'uiDownState'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:660: warning: unused variable 'uiDownKey'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c: At top level:
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:1032: warning: conflicting types for 'System_ResetPowerSaveCount'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysInput_Exe.c:541: note: previous implicit declaration of 'System_ResetPowerSaveCount' was here
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c:16:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c:45:
+../../Include/DrvExt/GSensor/Gsensor.h:118: warning: function declaration isn't a prototype
+../../Include/DrvExt/GSensor/Gsensor.h:119: warning: function declaration isn't a prototype
+../../Include/DrvExt/GSensor/Gsensor.h:120: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c:97: warning: "ACC_DET_FUNC" is not defined
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c:110: warning: "ACC_DET_FUNC" is not defined
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c:147: warning: "ACC_DET_FUNC" is not defined
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c: In function 'System_OnPowerInit':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c:286: warning: "ACC_DET_FUNC" is not defined
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c: In function 'UI_DetAutoLCDOff':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c:704: warning: implicit declaration of function 'GPIOMap_IsLCDBacklightOn'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c:706: warning: implicit declaration of function 'GPIOMap_TurnOffLCDBacklight'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c: In function 'UI_DetGsensor':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c:756: warning: unused variable 'Z'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c:756: warning: unused variable 'Y'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c:756: warning: unused variable 'X'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c:755: warning: unused variable 'gsensor_trig'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c: At top level:
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c:862: warning: "ACC_DET_FUNC" is not defined
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c: In function 'System_DetReverseGear':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysPower_Exe.c:934: warning: implicit declaration of function 'GPIOMap_IsReverseGear'
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysSensor_Exe.c:16:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/System/SysLens_Exe.c:16:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UI/PhotoView.c: In function 'PhotoDisplay2_Update':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UI/PhotoView.c:242: warning: unused variable 'temp'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/MovieStamp/MovieStamp.c: In function 'MovieStamp_Setup':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/MovieStamp/MovieStamp.c:129: warning: implicit declaration of function 'SysGetZHCarNoStamp'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/MovieStamp/MovieStamp.c:129: warning: passing argument 2 of 'strcpy' makes pointer from integer without a cast
+../../Include/Common/LibC/string.h:11: note: expected 'const char *' but argument is of type 'int'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/MovieStamp/MovieStamp.c:133: warning: implicit declaration of function 'SysGetNZHCarNoStamp'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/MovieStamp/MovieStamp.c:133: warning: passing argument 2 of 'strcpy' makes pointer from integer without a cast
+../../Include/Common/LibC/string.h:11: note: expected 'const char *' but argument is of type 'int'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/PipView.c: In function 'PipView_OnDraw':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/PipView.c:160: warning: implicit declaration of function 'DrvSensor_Det2ndSensor'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/PipView.c:164: warning: multi-line comment
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/DevCtrl/DevCtrlPhoto.c:43:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Calibration/../UIWnd/D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Calibration/CalibrationAPI.c:28:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Calibration/../UIWnd/D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Calibration/CalibrationTbl.c:27:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Calibration/../UIWnd/D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Calibration/CalibrationInt.c:23:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Calibration/Sensor/Cal_Dummy_650/../../../UIWnd/D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Calibration/Sensor/Cal_Dummy_650/Cal_Dummy_650.c:13:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Mode/UIMode.c:3:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIInfo/../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIInfo/UIPhotoMapping.c:10:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.h:6,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:22:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c: In function 'UI_UpdateCfgFile':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:763: warning: passing argument 1 of 'Cal_FillRect' from incompatible pointer type
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:73: note: expected 'PIRECT' but argument is of type 'struct URECT *'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:773: warning: passing argument 2 of 'Cal_ShowStringByColor' from incompatible pointer type
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:74: note: expected 'PIRECT' but argument is of type 'struct URECT *'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:777: warning: passing argument 2 of 'Cal_ShowStringByColor' from incompatible pointer type
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:74: note: expected 'PIRECT' but argument is of type 'struct URECT *'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c: In function 'UI_ShowLogoFile':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:872: warning: implicit declaration of function 'UI_ShowJPG'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c: In function 'UI_WriteLogoFileName':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:886: warning: unused variable 'fileName'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c: In function 'UI_UpdateLogoFile':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:980: warning: "ANIMATION_POWER_ON" is not defined
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:974: warning: unused variable 'formatRst'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:971: warning: unused variable 'index'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:970: warning: unused variable 'szLogo'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:969: warning: unused variable 'szSectionID'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:968: warning: unused variable 'szPicFile'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c: At top level:
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIConfig.c:72: warning: 'uiCurrentLogoID' defined but not used
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuCalibration/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuCalibration/UIMenuWndCalibration.c:10:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuCommon/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuCommon/MenuCommonItem.c:11:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuCommon/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuCommon/MenuCommonOption.c:9:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuCommon/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuCommon/TabMenu.c:4:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuMovie/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuMovie/MenuMovie.c:3:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPhoto/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPhoto/MenuPhoto.c:3:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPhoto/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPhoto/UIMenuWndPhotoExposure.c:13:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPhoto/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPhoto/UIMenuWndPhotoWB.c:13:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPhoto/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPhoto/UIMenuWndPhotoColor.c:13:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPlay/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPlay/MenuPlayback.c:3:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPlay/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPlay/UIMenuWndPlayDel.c:12:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPlay/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPlay/UIMenuWndPlayConfirmDel.c:8:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPlay/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPlay/UIMenuWndPlaySlideShow.c:12:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPlay/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuPlay/UIMenuWndPlaySlideShowCB.c:16:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/MenuSetup.c:3:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupDateTime.c:13:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupDefaultSetting.c:12:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupFormat.c:12:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupFormatConfirm.c:14:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupVersion.c:13:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupCarNumber.c:10:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupCarNumber.c: In function 'UIMenuWndSetupCarNumber_OnOpen':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupCarNumber.c:105: warning: implicit declaration of function 'SysGetZHCarNoStamp'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupCarNumber.c:105: warning: passing argument 2 of 'strncpy' makes pointer from integer without a cast
+../../Include/Common/LibC/string.h:7: note: expected 'const char *' but argument is of type 'int'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupCarNumber.c: In function 'UIMenuWndSetupCarNumber_OnKeyShutter2':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupCarNumber.c:159: warning: implicit declaration of function 'SysSetZHCarNoStamp'
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupCommonCarNumber.c:11:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupCommonCarNumber.c: In function 'UIMenuWndSetupCommonCarNumber_OnOpen':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupCommonCarNumber.c:97: warning: implicit declaration of function 'SysGetNZHCarNoStamp'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupCommonCarNumber.c:97: warning: passing argument 2 of 'strncpy' makes pointer from integer without a cast
+../../Include/Common/LibC/string.h:7: note: expected 'const char *' but argument is of type 'int'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupCommonCarNumber.c: In function 'UIMenuWndSetupCommonCarNumber_OnKeyMode':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuSetup/UIMenuWndSetupCommonCarNumber.c:139: warning: implicit declaration of function 'SysSetNZHCarNoStamp'
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuUSB/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIMenu/UIMenuUSB/UIMenuWndUSB.c:13:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowCommon/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowCommon/UIFlowWndWrnMsg.c:9:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowCommon/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowCommon/UIFlowWndWaitMoment.c:8:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowCommon/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowCommon/UIFlowWndUSB.c:8:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowCommon/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowCommon/UIFlowWndProcessing.c:10:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowWndPhoto.c:9:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowWndPhoto.c: In function 'UIFlowWndPhoto_OnBattery':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowWndPhoto.c:886: warning: 'return' with no value, in function returning non-void
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowWndPhoto.c: In function 'UIFlowWndPhoto_ReverseGear':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowWndPhoto.c:1137: warning: implicit declaration of function 'GPIOMap_TurnOnLCDBacklight'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowWndPhoto.c:1141: warning: implicit declaration of function 'FlowPhoto_IconDrawGuideLine'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowWndPhoto.c:1143: warning: implicit declaration of function 'GPIOMap_IsLCDBacklightOn'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowWndPhoto.c:1169: warning: control reaches end of non-void function
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowWndPhoto.c: In function 'UIFlowWndPhoto_OnKeyShutter2':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowWndPhoto.c:725: warning: control reaches end of non-void function
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowWndPhoto.c: In function 'UIFlowWndPhoto_OnKeyUp':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowWndPhoto.c:648: warning: control reaches end of non-void function
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowPhotoFuncs.c:5:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowPhotoIcons.c:5:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowPhotoIcons.c: In function 'FlowPhoto_UpdateIcons':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPhoto/UIFlowPhotoIcons.c:268: warning: implicit declaration of function 'GPIOMap_IsReverseGear'
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:12:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:21:
+../../Include/DrvExt/GSensor/Gsensor.h:118: warning: function declaration isn't a prototype
+../../Include/DrvExt/GSensor/Gsensor.h:119: warning: function declaration isn't a prototype
+../../Include/DrvExt/GSensor/Gsensor.h:120: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c: In function 'UIFlowMovie_ReverseGearDet':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:185: warning: implicit declaration of function 'GPIOMap_IsReverseGear'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:211: warning: implicit declaration of function 'GPIOMap_TurnOnLCDBacklight'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:215: warning: implicit declaration of function 'FlowMovie_IconDrawGuideLine'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:217: warning: implicit declaration of function 'GPIOMap_IsLCDBacklightOn'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:182: warning: unused variable 'u_Carback'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c: In function 'UIFlowWndMovie_OnExeRecord':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:510: warning: extra tokens at end of #endif directive
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c: In function 'UIFlowWndMovie_Initparam':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:620: warning: unused variable 'first'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c: In function 'UIFlowWndMovie_OnOpen':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:788: warning: implicit declaration of function 'UI_UpdateLogoFile'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:677: warning: unused variable 'KeyCode'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c: In function 'UIFlowWndMovie_OnKeyMenu':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:965: warning: implicit declaration of function 'FlowMovie_IconDrawLockFile'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:980: warning: enumeration value 'PIP_STYLE_1T1B2S' not handled in switch
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:980: warning: enumeration value 'PIP_STYLE_2T1S2B' not handled in switch
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:980: warning: enumeration value 'E_PIP_STYLE' not handled in switch
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:905: warning: unused variable 'uiSelect'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c: In function 'UIFlowWndMovie_OnKeyUp':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:1488: warning: unused variable 'uiSelect'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c: In function 'UIFlowWndMovie_OnBattery':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:1696: warning: 'return' with no value, in function returning non-void
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c: In function 'UIFlowWndMovie_OnMovieOneSec':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:1922: warning: implicit declaration of function 'FlowMovie_IconHideLockFile'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c: In function 'UIFlowWndMovie_OnACPlug':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:2388: warning: unused variable 'bFirst'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c: In function 'UIFlowWndMovie_OnCustom1':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:2520: warning: implicit declaration of function 'GPIOMap_TurnOnWhiteLight'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:2524: warning: implicit declaration of function 'GPIOMap_TurnOffWhiteLight'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:2529: warning: implicit declaration of function 'FlowMovie_IconDrawLED'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c: In function 'UIFlowWndMovie_ReverseGear':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:2726: warning: control reaches end of non-void function
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c: In function 'UIFlowWndMovie_OnMovieOneSec':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowWndMovie.c:1840: warning: 'uiRecSecond' may be used uninitialized in this function
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowMovieFuncs.c:2:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowMovieIcons.c:5:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowMovieIcons.c: In function 'FlowMovie_IconDrawPlateNumber':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowMovieIcons.c:340: warning: implicit declaration of function 'SysGetZHCarNoStamp'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowMovieIcons.c:340: warning: passing argument 2 of 'strncpy' makes pointer from integer without a cast
+../../Include/Common/LibC/string.h:7: note: expected 'const char *' but argument is of type 'int'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowMovieIcons.c:344: warning: implicit declaration of function 'SysGetNZHCarNoStamp'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowMovieIcons.c:344: warning: passing argument 2 of 'strcpy' makes pointer from integer without a cast
+../../Include/Common/LibC/string.h:11: note: expected 'const char *' but argument is of type 'int'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowMovieIcons.c:345: warning: implicit declaration of function 'SysSetZHCarNoStamp'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowMovieIcons.c: In function 'FlowMovie_UpdateIcons':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowMovieIcons.c:453: warning: implicit declaration of function 'UIFlowWndMovie_IsGsensorTrig'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowMovie/UIFlowMovieIcons.c:475: warning: implicit declaration of function 'GPIOMap_IsReverseGear'
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPlay/UIFlowWndPlay.c:10:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPlay/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPlay/UIFlowWndPlayThumb.c:8:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPlay/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPlay/UIFlowWndPlayMagnify.c:16:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPlay/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPlay/UIFlowPlayIcons.c:21:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPlay/../../../D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIFlow/UIFlowPlay/UIFlowPlayFuncs.c:7:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIInfo/UIInfo.c:9:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIInfo/UIInfo.c: In function 'Reset_MenuInfo':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIInfo/UIInfo.c:251: warning: implicit declaration of function 'SysSetZHCarNoStamp'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIInfo/UIInfo.c:252: warning: implicit declaration of function 'SysSetNZHCarNoStamp'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIInfo/UIInfo.c: At top level:
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIInfo/UIInfo.c:409: warning: conflicting types for 'SysSetNZHCarNoStamp'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIInfo/UIInfo.c:252: note: previous implicit declaration of 'SysSetNZHCarNoStamp' was here
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIInfo/UIInfo.c:418: warning: conflicting types for 'SysSetZHCarNoStamp'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIWnd/D800x480/UIInfo/UIInfo.c:251: note: previous implicit declaration of 'SysSetZHCarNoStamp' was here
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Mode/../UIWnd/D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Mode/UIModeCalibration.c:17:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Network/UIAppNetwork.c:2:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Mode/UIModeMovie.c:8:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Movie/UIAppMovie_Exe.c:2:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Movie/UIAppMovie_Exe.c:31:
+../../Include/DrvExt/GSensor/GSensor.h:118: warning: function declaration isn't a prototype
+../../Include/DrvExt/GSensor/GSensor.h:119: warning: function declaration isn't a prototype
+../../Include/DrvExt/GSensor/GSensor.h:120: warning: function declaration isn't a prototype
+In file included from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Movie/UIAppMovie_CB.c:1:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Movie/UIAppMovie_CB.c: In function 'UIMovie_ImmProc':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Movie/UIAppMovie_CB.c:264: warning: implicit declaration of function 'UIFlowWndMovie_IsGsensorTrig'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Movie/UIAppMovie_CB.c:266: warning: implicit declaration of function 'UIFlowWndMovie_SetGsensorTrigFlag'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Movie/UIAppMovie_CB.c:267: warning: implicit declaration of function 'FlowMovie_IconHideLockFile'
+In file included from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Movie/UIAppMovie_3DNR.c:1:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Mode/../UIWnd/D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Mode/UIModePhoto.c:18:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Photo/UIAppPhoto_Exe.c:15:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Play/UIAppPlay_Exe.c:11:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Play/UIPlayComm.c:5:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Setup/UISetup_Exe.c:3:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Setup/UISetup_Exe.c: In function 'SetupExe_OnLanguage':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Setup/UISetup_Exe.c:449: warning: implicit declaration of function 'SysSetNZHCarNoStamp'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Setup/UISetup_Exe.c: In function 'SetupExe_OnLed':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Setup/UISetup_Exe.c:1032: warning: implicit declaration of function 'GPIOMap_TurnOffWhiteLight'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Setup/UISetup_Exe.c:1035: warning: implicit declaration of function 'GPIOMap_TurnOnWhiteLight'
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Background/../../UIWnd/D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/Background/UIBackgroundObj.c:17:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/UsbDisk/UIAppUsbDisk_Exe.c: In function 'AppInit_ModeUSBMSDC':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/UsbDisk/UIAppUsbDisk_Exe.c:188: warning: unused variable 'pStrgDev3'
+e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/UIApp/UsbDisk/UIAppUsbDisk_Exe.c:187: warning: unused variable 'pStrgDev2'
+In file included from ./SrcCode/UIApp/Movie/UIAppMovie.h:27,
+                 from ./SrcCode/System/AppCommon.h:51,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Resource/../UIWnd/D800x480/UIFlow.h:21,
+                 from e:/workspace/NT9665x_CarDV_FW_PW84_328/Project/DemoKit/SrcCode/Resource/UIResource.c:18:
+../../Include/DrvExt/GPS/GPS.h:276: warning: function declaration isn't a prototype

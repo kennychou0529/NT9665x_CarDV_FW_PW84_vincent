@@ -143,7 +143,7 @@ SX_TIMER_ITEM(GxPower_DetBatteryIns, UI_DetBatteryInsert, 25, TRUE)
 #endif
 SX_TIMER_ITEM(UI_DetAutoLCDOff, UI_DetAutoLCDOff, 50, TRUE)
 SX_TIMER_ITEM(UI_DetDelayPowerOff, UI_DetDelayPowerOff, 50, FALSE)
-SX_TIMER_ITEM(UI_DetGsensor, UI_DetGsensor, 1, FALSE)
+SX_TIMER_ITEM(UI_DetGsensor, UI_DetGsensor, 25, TRUE)
 #if(ACC_DET_FUNC==ENABLE)	     
 SX_TIMER_ITEM(System_DetACC, System_DetACC, 5, TRUE)
 #endif
@@ -829,7 +829,6 @@ void UI_DetGsensor(void)
                 }
                 #endif
                 //vincent@20150805-1 end
-                
 				if(GSensor_GetStatus(&GS_Data))
 		        {
 		            #if 1

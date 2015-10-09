@@ -1,12 +1,12 @@
 GSensor_Data/Release/ObjectCode/Gsensor_GMA301.o: \
- e:/workspace/NT9665x_CarDV_FW_PW84_vincent/DrvExt/DrvExt_src/GSensor/Gsensor_GMA301/Gsensor_GMA301.c \
+ e:/workspace/NT9665x_CarDV_FW_PW84_328/DrvExt/DrvExt_src/GSensor/Gsensor_GMA301/Gsensor_GMA301.c \
  ../../../Include/DrvExt/GSensor/GSensor.h \
  ../../../Include/Drv/Driver_Sys/i2c.h \
  ../../../Include/Drv/Driver_Sys/Driver.h ../../../Include/Common/Type.h \
  ../../../Include/Common/StdCMac.h ../../../Include/Common/Platform.h \
  ../../../Include/Common/Kernel/mIType.h \
  ../../DrvExt_src/GSensor/GSensor_Int.h \
- e:/workspace/NT9665x_CarDV_FW_PW84_vincent/DrvExt/DrvExt_src/GSensor/Gsensor_GMA301/Gsensor_GMA301.h \
+ e:/workspace/NT9665x_CarDV_FW_PW84_328/DrvExt/DrvExt_src/GSensor/Gsensor_GMA301/Gsensor_GMA301.h \
  ../../../Include/DrvExt/ModelExt/IOInit.h \
  ../../../Include/Drv/Driver_Sys/pad.h \
  ../../../Include/Drv/Driver_Sys/top.h \
@@ -38,7 +38,7 @@ GSensor_Data/Release/ObjectCode/Gsensor_GMA301.o: \
 
 ../../DrvExt_src/GSensor/GSensor_Int.h:
 
-e:/workspace/NT9665x_CarDV_FW_PW84_vincent/DrvExt/DrvExt_src/GSensor/Gsensor_GMA301/Gsensor_GMA301.h:
+e:/workspace/NT9665x_CarDV_FW_PW84_328/DrvExt/DrvExt_src/GSensor/Gsensor_GMA301/Gsensor_GMA301.h:
 
 ../../../Include/DrvExt/ModelExt/IOInit.h:
 

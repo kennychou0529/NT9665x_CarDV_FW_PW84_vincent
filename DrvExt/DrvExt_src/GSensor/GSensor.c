@@ -188,47 +188,42 @@ UINT32 GSensor_I2C_ReadReg(UINT32 uiAddr)
     ulReadAddr  =g_GsensorInfo.I2C_Slave_RAddr;
     ulReg1      =(uiAddr&0x000000ff);
     ulData1     = 0;
-
+	
+	
     if(i2c_lock(g_GsensorInfo.I2C_Channel) != E_OK)
     {
         debug_err(("GSensor: readReg I2C Lock Fail\r\n"));
         return ulData1;
     }
-
     if (GSensor_I2C_Transmit(ulWriteAddr, 1, 0) != I2C_STS_OK)
     {
         debug_err(("Error transmit data1!!\r\n"));
         i2c_unlock(g_GsensorInfo.I2C_Channel);
         return  ulData1;
     }
-
     if (GSensor_I2C_Transmit(ulReg1, 0, 0) != I2C_STS_OK)
     {
         debug_err(("Error transmit data2!!\r\n"));
         i2c_unlock(g_GsensorInfo.I2C_Channel);
         return  ulData1;
     }
-
     if (GSensor_I2C_Transmit(ulReadAddr, 1, 0) != I2C_STS_OK)
     {
         debug_err(("Error transmit data3!!\r\n"));
         i2c_unlock(g_GsensorInfo.I2C_Channel);
         return  ulData1;
     }
-
     if (GSensor_I2C_Receive(&ulData1, 1, 1) != I2C_STS_OK)
     {
         debug_err(("Error Receive data!!\r\n"));
         i2c_unlock(g_GsensorInfo.I2C_Channel);
         return  ulData1;
     }
-
     if(i2c_unlock(g_GsensorInfo.I2C_Channel) != E_OK)
     {
         debug_err(("GSensor: readReg I2C UnLock Fail\r\n"));
         return  ulData1;
     }
-
     return  ulData1;
 }
 
@@ -353,7 +348,6 @@ BOOL GSensor_GetStatus(Gsensor_Data *GS_Data)
     {
         return FALSE;
     }
-
     return g_pGSensorObj->GetStatus(GS_Data);
 }
 

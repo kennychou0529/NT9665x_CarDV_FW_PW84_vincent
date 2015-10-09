@@ -126,12 +126,12 @@ int mir3da_chip_init(void){
 	int             res = 0;
 	unsigned char data=0;
 
-/*
+
 	if(mir3da_i2c_init()){
 		return -1;
 		debug_msg("------mir3da i2c init error-----\r\n"); 
 	}
-*/
+
 	mir3da_register_read(NSA_REG_WHO_AM_I,&data);
 	if(data != 0x13){
 	       debug_msg("------mir3da read chip id  error= %x-----\r\n",data); 
@@ -145,16 +145,20 @@ int mir3da_chip_init(void){
 	Delay_DelayMs(5);
 
 	res |= mir3da_register_mask_write(NSA_REG_G_RANGE, 0x03, 0x02);
-	res |= mir3da_register_mask_write(NSA_REG_POWERMODE_BW, 0xFF, 0x1E);
+	//res |= mir3da_register_mask_write(NSA_REG_POWERMODE_BW, 0xFF, 0x1E);
+	res |= mir3da_register_mask_write(NSA_REG_POWERMODE_BW, 0xFF, 0x5E);//magic-20151008 add
 	res |= mir3da_register_mask_write(NSA_REG_ODR_AXIS_DISABLE, 0xFF, 0x07);
 	
-
-	res |= mir3da_register_mask_write(NSA_REG_INT_LATCH, 0x8F, 0x85);
-	res |= mir3da_register_mask_write(NSA_REG_INT_PIN_CONFIG, 0x0F, 0x00);//vincent@20150917-1
+	//res |= mir3da_register_mask_write(NSA_REG_INT_PIN_CONFIG, 0x0F, 0x00);//vincent@20150917-1
+	//res |= mir3da_register_mask_write(NSA_REG_INT_LATCH, 0x8F, 0x85);
+	res |= mir3da_register_mask_write(NSA_REG_INT_PIN_CONFIG, 0x0F, 0x05);//set int_pin level
+	res |= mir3da_register_mask_write(NSA_REG_INT_LATCH, 0x8F, 0x86);//clear latch and set latch mode
+	
 	
 	res |= mir3da_register_mask_write(NSA_REG_ENGINEERING_MODE, 0xFF, 0x83);
 	res |= mir3da_register_mask_write(NSA_REG_ENGINEERING_MODE, 0xFF, 0x69);
 	res |= mir3da_register_mask_write(NSA_REG_ENGINEERING_MODE, 0xFF, 0xBD);
+	res |= mir3da_register_mask_write(NSA_REG_SWAP_POLARITY, 0xFF, 0x00);//magic-20151008 add
 
 	return res;	    	
 }
@@ -467,11 +471,9 @@ BOOL GSensor_DA380_GetStatus(Gsensor_Data *GS_Data)
     int ret=FALSE;	
     UINT32 stSens = 0;
     double dlSens = 0.0;
-	
        ret = mir3da_read_data(&x,&y,&z);    
        rotate(&rot,&upd,x,y,z);
 	xyz = GSensor_DA380_GetSensitivityLevel();
-
     //debug_msg("vincent@20150825 GSensor_DA380_GetStatus:x=%d,y=%d,z=%d\r\n", x, y, z);
     g_stGsenX = x;
     g_stGsenY = y;

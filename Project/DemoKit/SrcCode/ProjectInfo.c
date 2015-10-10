@@ -88,7 +88,7 @@ char gFWExternalVersion[33]="k12.2015.0923.V0.1";
 #elif(_MODEL_DSC_ == _MODEL_DUAL_SAIBOSHI_)
 char gFWExternalVersion[33]="SAIBOSHI.2015.0731.V0.1";
 #elif(_MODEL_DSC_ == _MODEL_DUAL_AONI328_)
-char gFWExternalVersion[33]="328.2015.0930.V0.1";
+char gFWExternalVersion[33]="328.2015.1010.V0.1";
 #else
 //char gFWExternalVersion[33]="8401.2015.0727.V0.1";
 char gFWExternalVersion[33]="8401.2015.0727.V1.0";

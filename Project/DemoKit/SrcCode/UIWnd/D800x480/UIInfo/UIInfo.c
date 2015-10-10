@@ -464,6 +464,7 @@ void SysCheckFlag(void)
     SysLimitFlag(FL_MOVIE_GPS,          0,  GPS_ID_MAX,                 DEFAULT_MOVIE_GPS);
     SysLimitFlag(FL_MOVIE_GSENSOR,      0,  GSENSOR_ID_MAX,          DEFAULT_MOVIE_GSENSOR);
     SysLimitFlag(FL_MOVIE_PARKING,      0,  MOVIE_PARKING_MAX,          DEFAULT_MOVIE_PARKING);
+	SysLimitFlag(FL_CAR_NUM,      0,  CAR_NUM_ID_MAX,          DEFAULT_MOVIE_CAR_NUMBER);//magic-20151010
 
  #if(_MODEL_DSC_ == _MODEL_DUAL_AONI328_)//vincent@20150915-2
     SysLimitFlag(FL_MOVIE_DUAL_VIEW_MODE, 0, MOVIE_DUAL_VIEW_MAX,       DEFAULT_MOVIE_DUAL_VIEW_MODE);
@@ -616,6 +617,7 @@ void SysResetFlag(void)
     SysSetFlag(FL_MOVIE_GPS,            DEFAULT_MOVIE_GPS);
     SysSetFlag(FL_MOVIE_GSENSOR,        DEFAULT_MOVIE_GSENSOR);
     SysSetFlag(FL_MOVIE_PARKING,        DEFAULT_MOVIE_PARKING);
+	SysSetFlag(FL_CAR_NUM,              DEFAULT_MOVIE_CAR_NUMBER);//magic-20151010
     
  #if(_MODEL_DSC_ == _MODEL_DUAL_AONI328_)//vincent@20150915-2
     SysSetFlag(FL_MOVIE_DUAL_VIEW_MODE, DEFAULT_MOVIE_DUAL_VIEW_MODE);

@@ -758,8 +758,8 @@ INT32 SetupExe_OnSysReset(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
     //debug_msg("[SetupObj] do SysReset\r\n");
 #if PST_FUNC
     //AppBKW_SetData(BKW_WAIT_TIME, 1000);//show wait window for 2 second
-    AppBKW_SetData(BKW_WAIT_TIME, 250);//show wait window for 500m second
-    BKG_PostEvent(NVTEVT_BKW_DUMMY_WAIT);
+    //AppBKW_SetData(BKW_WAIT_TIME, 250);//show wait window for 500m second
+   // BKG_PostEvent(NVTEVT_BKW_DUMMY_WAIT);
     //#NT#For menu reset flag,for FlowPhoto_InitSettingParams
     UI_SetData(FL_ResetFlag,TRUE);
 

@@ -266,6 +266,8 @@ void UIMovie_ImmProc(UINT32 type, UINT32 p1, UINT32 p2, UINT32 p3)
 		UIFlowWndMovie_SetGsensorTrigFlag(FALSE);                        
 	  	FlowMovie_IconHideLockFile();
         }
+		
+		MediaRec_CancelCrash();
         #endif
 
         // [TO DO]: log GPS data

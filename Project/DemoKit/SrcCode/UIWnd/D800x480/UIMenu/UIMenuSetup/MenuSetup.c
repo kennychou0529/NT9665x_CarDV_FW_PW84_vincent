@@ -174,6 +174,7 @@ int Setup_MenuCallback(UINT32 uiMessage, UINT32 uiParam)
             break;
 
         case IDM_LANGUAGE:
+			SysSetFlag(FL_LANGUAGE,uwOption);
             Ux_SendEvent(&UISetupObjCtrl, NVTEVT_EXE_LANGUAGE, 1, uwOption);
             break;
 

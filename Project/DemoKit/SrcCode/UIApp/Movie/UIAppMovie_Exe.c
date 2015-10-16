@@ -113,7 +113,6 @@ extern void MovRec_SetTestMode(MEDIAREC_TESTMODE *pTestMode);
 extern void DscMovie_RegIPLChangeCB(MediaRecIPLChangeCB *pIPLChangeCB);
 extern void DscMovie_RegGetReadyBufCB(MediaRecIPLGetReadyCB *pGetReadyBufCB);
 extern void DscMovie_RegGetReadyBufCB2(MediaRecIPLGetReadyCB *pGetReadyBufCB);
-
 static void Movie_SetYUV(UINT32 uiMovieSize)
 {
     UINT32      i;
@@ -552,7 +551,7 @@ void Movie_SetRecParam(void)
         MediaRec_ChangeParameter(MEDIAREC_RECPARAM_ENDTYPE, MEDIAREC_ENDTYPE_NORMAL, 0, 0);
         #else
         MediaRec_ChangeParameter(MEDIAREC_RECPARAM_ENDTYPE, MEDIAREC_ENDTYPE_CUT_TILLCARDFULL, 0, 0);
-        MediaRec_ChangeParameter(MEDIAREC_RECPARAM_CUTSEC, 1500, 0, 0); // 25 min
+        MediaRec_ChangeParameter(MEDIAREC_RECPARAM_CUTSEC, 600, 0, 0); // 10 min
         #endif
     }
 
@@ -1944,6 +1943,7 @@ UINT32 Movie_GetCyclicRecTime(void)
         break;
 
     case MOVIE_CYCLICREC_OFF:
+		uiCyclicRecTime = 600;
         break;
 
     default:
@@ -1974,7 +1974,7 @@ INT32 MovieExe_OnCyclicRec(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
     }
     else
     {
-        MediaRec_ChangeParameter(MEDIAREC_RECPARAM_CUTSEC, 1500, 0, 0); // 25 min
+        MediaRec_ChangeParameter(MEDIAREC_RECPARAM_CUTSEC, 600, 0, 0); // 10 min
         MediaRec_ChangeParameter(MEDIAREC_RECPARAM_ENDTYPE, MEDIAREC_ENDTYPE_CUT_TILLCARDFULL, 0, 0);
     }
 
@@ -2073,7 +2073,6 @@ INT32 MovieExe_OnRecStart(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
     UINT32  uiUserDataAddr, uiUserDataSize = 0;
     UINT32  uiWidth2 = 0, uiHeight2 = 0;
     UINT32  uiFlag = 0;//vincent@20150804-1
-
     #if (UVC_RECORD_FUNC == ENABLE)
     if (UvcRec_IsUvcActive())           // if UVC is active
     {
@@ -2108,8 +2107,13 @@ INT32 MovieExe_OnRecStart(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
     }
     //#NT#2013/05/15#Calvin Chang -end
     Movie_SetRecParam();
+	if( (SysGetFlag(FL_MOVIE_PARKING) == MOVIE_PARKING_ON)  && (FlowMovie_GetFirstBootRecFlag() == TRUE))
+	{
+		MediaRec_SetCrash();
+		FlowMovie_IconDrawLockFile();
+	}
+	
     Movie_SetQPInitLevel();
-
     #if (MOVIE_TEST_ENABLE == ENABLE)
     {// test codes for fixed YUV patterns mode (no IPL)!!!
         if (g_MediaRecTestMode.bEnable && g_MediaRecTestMode.uiVidSrcType == MEDIAREC_SRC_FIXED_YUV)
@@ -2138,7 +2142,6 @@ INT32 MovieExe_OnRecStart(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
         MediaRec_SetGPSData((UINT32)&gpsdata, sizeof(GPSDATA));
         #endif
     #endif
-
     //---------------------------------------------------------------------------------------------
     // setup movie date stamp if necessary
     //---------------------------------------------------------------------------------------------
@@ -2196,7 +2199,6 @@ INT32 MovieExe_OnRecStart(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
             NULL);
 #endif
 //vincent@20150804-1 end
-
         if (SysGetFlag(FL_MOVIE_DUAL_REC))
         {
             MovieStamp_SetDataAddr(1, uiStampAddr + POOL_SIZE_DATEIMPRINT/2);
@@ -2235,7 +2237,6 @@ INT32 MovieExe_OnRecStart(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
             uiWidth,
             uiHeight,
             NULL);
-
         MovieStamp_Setup(
             1,
             STAMP_OFF,
@@ -2243,7 +2244,6 @@ INT32 MovieExe_OnRecStart(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
             uiHeight2,
             NULL);
     }
-
     // send command to UIMovieRecObj to start movie recording
     Ux_SendEvent(&UIMovieRecObjCtrl, NVTEVT_START_REC_MOVIE, 0);
 

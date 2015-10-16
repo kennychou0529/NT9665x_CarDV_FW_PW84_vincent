@@ -480,7 +480,6 @@ INT32 UIFlowWndMovie_OnExeRecord(VControl *pCtrl, UINT32 paramNum, UINT32 *param
                     IPL_SetCmd(IPL_SET_SLEEP, (void *)&Info);
                     IPL_WaitCmdFinish();
                 }
-
                 FlowMovie_StartRec();
                 // start USB detect timer again
                 if (g_ACPlug == TRUE)
@@ -495,6 +494,7 @@ INT32 UIFlowWndMovie_OnExeRecord(VControl *pCtrl, UINT32 paramNum, UINT32 *param
                 (uiState == UIFlowWndMovie_Restart_Rec))
             {
                 FlowMovie_StopRec();
+				MediaRec_CancelCrash();
                 // update ui window icon
 		   UIFlowWndMovie_SetGsensorTrigFlag(FALSE);                
                 FlowMovie_UpdateIcons(TRUE);
@@ -675,7 +675,8 @@ INT32 UIFlowWndMovie_OnOpen(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray
 {
    static BOOL firstpoweron=TRUE;
    UINT32 KeyCode;
-   
+   UINT8 flag = 0;
+  
     //#NT#2014/11/26#KS Hung -begin
     //GSensor_open();
     //#NT#2014/11/26#KS Hung -end
@@ -1843,6 +1844,7 @@ INT32 UIFlowWndMovie_OnMovieOneSec(VControl *pCtrl, UINT32 paramNum, UINT32 *par
     {
     case MOV_ST_REC:
     case MOV_ST_REC|MOV_ST_ZOOM:
+		
         bRecordShow = !bRecordShow;
        //if(bCarGuideLineMode==FALSE)
     	//{
@@ -1861,10 +1863,25 @@ INT32 UIFlowWndMovie_OnMovieOneSec(VControl *pCtrl, UINT32 paramNum, UINT32 *par
             //UINT32 uiRecSecond, uiCyclicRecTime;
 
             uiRecSecond = paramArray[0];
-            uiCyclicRecTime = Movie_GetCyclicRecTime();
+			uiCyclicRecTime = Movie_GetCyclicRecTime();
+			
+			if((uiRecSecond == 20) && (SysGetFlag(FL_MOVIE_PARKING) == MOVIE_PARKING_ON)  && (FlowMovie_GetFirstBootRecFlag() == TRUE))
+			{
+				FlowMovie_SetFirstBootRecFlag(FALSE);
+				
+				FlowMovie_StopRec();
+				FlowMovie_StartRec();
+				
+			}
+			
+           
             if (uiRecSecond > uiCyclicRecTime)
             {
                 uiRecSecond -= uiCyclicRecTime;
+				if(SysGetFlag(FL_MOVIE_CYCLIC_REC) == MOVIE_CYCLICREC_OFF)
+				{
+					FlowMovie_IconHideLockFile();
+				}
             }
             FlowMovie_SetRecCurrTime(uiRecSecond);
 

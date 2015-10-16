@@ -150,13 +150,14 @@ INT32 UIMenuWndSetupCarNumber_OnClose(VControl *pCtrl, UINT32 paramNum, UINT32 *
 INT32 UIMenuWndSetupCarNumber_OnKeyShutter2(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
 {
 	int i;
-
+	
 	for (i=0; i<CARNO_LEN; i++)
-	{
+	{   
 		CarNoBuf[i] = CarNoShow[i][0];
 	}
 	CarNoBuf[i] = '\0';
 	SysSetZHCarNoStamp(CarNoBuf);
+	debug_msg("magic_car = %s",CarNoBuf);
 	Ux_CloseWindow(pCtrl, 0);
     return NVTEVT_CONSUME;
 }

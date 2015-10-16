@@ -765,7 +765,7 @@ void UI_DetGsensor(void)
     UINT32 uCurTickCount = 0;
     #endif
      
-    if(counter<5)
+    if(counter<20)
     {
 	GSensor_GetStatus(&GS_Data);
 	counter++;

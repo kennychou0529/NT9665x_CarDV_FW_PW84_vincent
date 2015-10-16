@@ -114,23 +114,25 @@ void MovieStamp_Setup(UINT32 uiVidEncId, UINT32 uiFlag, UINT32 uiImageWidth, UIN
     ICON_DB const   *pDB;
     UINT32          uiIconID;
     UINT32          uiStrOffset;
-
     g_uiMovieStampSetup[uiVidEncId] = uiFlag;
-
     if ((uiFlag & STAMP_SWITCH_MASK) == STAMP_OFF)
     {
         return;
     }
 	memset(carnumber_stamp_str, 0, CAR_NUMBER_STAMP_LEN);
+	
 	if (SysGetFlag(FL_CAR_NUM) == CAR_NUM_ON)
-	{	  	
-	        if((SysGetFlag(FL_LANGUAGE) == LANG_SC) ||(SysGetFlag(FL_LANGUAGE) == LANG_TC))			
+	{	
+
+		if((SysGetFlag(FL_LANGUAGE) == LANG_SC) ||(SysGetFlag(FL_LANGUAGE) == LANG_TC))			
 		{
+
 			strcpy(carnumber_stamp_str, SysGetZHCarNoStamp());
 		}
 		else
 		{
-			strcpy(carnumber_stamp_str, SysGetNZHCarNoStamp());
+			//strcpy(carnumber_stamp_str, SysGetNZHCarNoStamp());
+			strcpy(carnumber_stamp_str, SysGetZHCarNoStamp());
 		}
 	}
 	else
@@ -138,7 +140,6 @@ void MovieStamp_Setup(UINT32 uiVidEncId, UINT32 uiFlag, UINT32 uiImageWidth, UIN
 		sprintf(carnumber_stamp_str," ");
 	}
     
-
     #if (WATERLOGO_FUNCTION == ENABLE)
     {
         // setup water logo
@@ -1160,6 +1161,8 @@ void MovieStamp_CopyData(UINT32 uiVidEncId, UINT32 yAddr, UINT32 cbAddr, UINT32 
                     sprintf(&g_cMovieStampStr[uiVidEncId][0], "%s", carnumber_stamp_str);
                 }
             #else
+			if (SysGetFlag(FL_CAR_NUM) == CAR_NUM_ON)
+			{
                 switch (g_uiMovieStampSetup[uiVidEncId] & STAMP_DATE_FORMAT_MASK)
                 {
                 case STAMP_DD_MM_YY:
@@ -1172,6 +1175,22 @@ void MovieStamp_CopyData(UINT32 uiVidEncId, UINT32 yAddr, UINT32 cbAddr, UINT32 
                     sprintf(&g_cMovieStampStr[uiVidEncId][0], "%s %s %04d/%02d/%02d %02d:%02d:%02d", MOVIE_STAMP_STRING,carnumber_stamp_str,CurDateTime.tm_year, CurDateTime.tm_mon, CurDateTime.tm_mday, CurDateTime.tm_hour, CurDateTime.tm_min, CurDateTime.tm_sec);
                     break;
                 }
+			}
+			else
+			{
+				switch (g_uiMovieStampSetup[uiVidEncId] & STAMP_DATE_FORMAT_MASK)
+                {
+                case STAMP_DD_MM_YY:
+                    sprintf(&g_cMovieStampStr[uiVidEncId][0], "%s %02d/%02d/%04d %02d:%02d:%02d", MOVIE_STAMP_STRING,CurDateTime.tm_mday, CurDateTime.tm_mon, CurDateTime.tm_year, CurDateTime.tm_hour, CurDateTime.tm_min, CurDateTime.tm_sec);
+                    break;
+                case STAMP_MM_DD_YY:
+                    sprintf(&g_cMovieStampStr[uiVidEncId][0], "%s %02d/%02d/%04d %02d:%02d:%02d", MOVIE_STAMP_STRING,CurDateTime.tm_mon, CurDateTime.tm_mday, CurDateTime.tm_year, CurDateTime.tm_hour, CurDateTime.tm_min, CurDateTime.tm_sec);
+                    break;
+                default:
+                    sprintf(&g_cMovieStampStr[uiVidEncId][0], "%s %04d/%02d/%02d %02d:%02d:%02d", MOVIE_STAMP_STRING,CurDateTime.tm_year, CurDateTime.tm_mon, CurDateTime.tm_mday, CurDateTime.tm_hour, CurDateTime.tm_min, CurDateTime.tm_sec);
+                    break;
+				}
+			}
             #endif 
         }
         else if ((g_uiMovieStampSetup[uiVidEncId] & STAMP_DATE_TIME_MASK) == STAMP_DATE_TIME_AMPM)

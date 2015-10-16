@@ -464,12 +464,9 @@ void SysCheckFlag(void)
     SysLimitFlag(FL_MOVIE_GPS,          0,  GPS_ID_MAX,                 DEFAULT_MOVIE_GPS);
     SysLimitFlag(FL_MOVIE_GSENSOR,      0,  GSENSOR_ID_MAX,          DEFAULT_MOVIE_GSENSOR);
     SysLimitFlag(FL_MOVIE_PARKING,      0,  MOVIE_PARKING_MAX,          DEFAULT_MOVIE_PARKING);
-	SysLimitFlag(FL_CAR_NUM,      0,  CAR_NUM_ID_MAX,          DEFAULT_MOVIE_CAR_NUMBER);//magic-20151010
-
  #if(_MODEL_DSC_ == _MODEL_DUAL_AONI328_)//vincent@20150915-2
     SysLimitFlag(FL_MOVIE_DUAL_VIEW_MODE, 0, MOVIE_DUAL_VIEW_MAX,       DEFAULT_MOVIE_DUAL_VIEW_MODE);
  #endif
-
     // Playback
     SysLimitFlag(FL_PROTECT,            0,  FILE_PROTECT_ID_MAX,        DEFAULT_PROTECT);
     SysLimitFlag(FL_SLIDE_SHOW,         0,  SLIDE_SHOW_ID_MAX,          DEFAULT_SLIDE_SHOW);
@@ -482,6 +479,7 @@ void SysCheckFlag(void)
     SysLimitFlag(FL_SILENT,             0,  SILENT_ID_MAX,              DEFAULT_SILENT);
     //#NT#2011/08/03#KS Hung -end
     SysLimitFlag(FL_AUTO_POWER_OFF,     0,  POWEROFF_SETTING_MAX,       DEFAULT_AUTO_POWER_OFF);
+	SysLimitFlag(FL_CAR_NUM,      0,  CAR_NUM_ID_MAX,          DEFAULT_MOVIE_CAR_NUMBER);//magic-20151010
     SysLimitFlag(FL_FREQUENCY,          0,  FREQUENCY_ID_MAX,           DEFAULT_FREQUENCY);
     SysLimitFlag(FL_TV_MODE,            0,  TV_MODE_ID_MAX,             DEFAULT_TV_MODE);
 
@@ -605,7 +603,7 @@ void SysResetFlag(void)
     SysSetFlag(FL_MOVIE_QUALITY,        DEFAULT_MOVIE_QUALITY);
     SysSetFlag(FL_MOVIE_COLOR,          DEFAULT_MOVIE_COLOR);
     SysSetFlag(FL_MOVIE_SELFTIMER,      DEFAULT_MOVIE_SELFTIMER);
-//    SysSetFlag(FL_MOVIE_EV,             DEFAULT_MOVIE_EV);
+    SysSetFlag(FL_MOVIE_EV,             DEFAULT_MOVIE_EV);
     SysSetFlag(FL_MOVIE_VIVILINK,       DEFAULT_MOVIE_VIVILINK);
     SysSetFlag(FL_MOVIE_CYCLIC_REC,     DEFAULT_MOVIE_CYCLICREC);
     SysSetFlag(FL_MOVIE_TIMELAPSE_REC,  DEFAULT_MOVIE_TIMELAPSEREC);
@@ -617,7 +615,6 @@ void SysResetFlag(void)
     SysSetFlag(FL_MOVIE_GPS,            DEFAULT_MOVIE_GPS);
     SysSetFlag(FL_MOVIE_GSENSOR,        DEFAULT_MOVIE_GSENSOR);
     SysSetFlag(FL_MOVIE_PARKING,        DEFAULT_MOVIE_PARKING);
-	SysSetFlag(FL_CAR_NUM,              DEFAULT_MOVIE_CAR_NUMBER);//magic-20151010
     
  #if(_MODEL_DSC_ == _MODEL_DUAL_AONI328_)//vincent@20150915-2
     SysSetFlag(FL_MOVIE_DUAL_VIEW_MODE, DEFAULT_MOVIE_DUAL_VIEW_MODE);
@@ -629,6 +626,7 @@ void SysResetFlag(void)
 
     // System
     SysSetFlag(FL_AUTO_POWER_OFF,       DEFAULT_AUTO_POWER_OFF);
+	SysSetFlag(FL_CAR_NUM,              DEFAULT_MOVIE_CAR_NUMBER);//magic-20151010
     SysSetFlag(FL_DATE_TIME,            DEFAULT_DATE_TIME);
     SysSetFlag(FL_BEEP,                 DEFAULT_BEEP);
     SysSetFlag(FL_SILENT,               DEFAULT_SILENT);

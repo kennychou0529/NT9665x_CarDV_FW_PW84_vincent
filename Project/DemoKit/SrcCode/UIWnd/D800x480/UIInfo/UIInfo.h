@@ -206,29 +206,29 @@ typedef enum
     FL_MOVIE_GSENSOR,           // Movie GSensor
     FL_MOVIE_GPS,               // Movie GPS
     FL_MOVIE_PARKING,
-    FL_MOVIE_DUAL_VIEW_MODE,    //Movie Dual view mode //vincent@20150915-2
+    FL_MOVIE_DUAL_VIEW_MODE,    //Movie Dual view mode //vincent@20150915-2  //44
 
     // Playback
     FL_DELETE_PHOTO,            // Delete Still
     FL_DELETE_MOVIE,            // Delete Video
     FL_PROTECT,                 // File protect operation (pseudo flag)
     FL_SLIDE_SHOW,              // Slide show time
-    FL_MAKE_MOVIE,              // Make movie option
+    FL_MAKE_MOVIE,              // Make movie option  //49
     FL_PLAY_STILL_VIVILINK,     // Playback mode Vivilink value (depends on file content)
     FL_PLAY_VIDEO_VIVILINK,     // Playback mode Vivilink value (depends on file content)
     FL_CROP,
-    FL_ROTATE,
-    FL_PHOTO_PROTECT,
-    FL_MOVIE_PROTECT,
-    FL_PICTBRIDGE,
+    FL_ROTATE,   //53
+    FL_PHOTO_PROTECT,   //54
+    FL_MOVIE_PROTECT,  //55
+    FL_PICTBRIDGE,  //56
 
     // System
-    FL_AUTO_POWER_OFF,          // Auto power off time
-    FL_CAR_NUM,
-    FL_DATE_TIME,
-    FL_BEEP,                    // Beep sound on/off
-    FL_SILENT,                  // definition is opposite with FL_BEEP,
-    FL_LANGUAGE,                // Language
+    FL_AUTO_POWER_OFF,          // Auto power off time //57
+    FL_CAR_NUM,   //58
+    FL_DATE_TIME,   //59
+    FL_BEEP,                    // Beep sound on/off 60
+    FL_SILENT,                  // definition is opposite with FL_BEEP, 61
+    FL_LANGUAGE,                // Language 62
     FL_FREQUENCY,               // Frequency (50Hz/60Hz)
     FL_LCD_BACKLIGHT,           // Lcd backlight
     FL_TV_MODE,                 // TV mode (NTSC/PAL)

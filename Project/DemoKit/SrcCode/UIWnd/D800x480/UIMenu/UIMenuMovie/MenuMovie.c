@@ -221,6 +221,7 @@ int Movie_MenuCallback(UINT32 uiMessage, UINT32 uiParam)
             break;
 			
 	  case IDM_CAR_NUM:
+	  	SysSetFlag(FL_CAR_NUM,uwOption);
 	  	if(uwOption==1)
 	  	{
 	            if ((SysGetFlag(FL_LANGUAGE) == LANG_SC)||(SysGetFlag(FL_LANGUAGE) == LANG_TC)) 

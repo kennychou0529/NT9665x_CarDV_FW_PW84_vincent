@@ -381,7 +381,7 @@ static UINT32 GSensor_DA380_GetSensitivityLevel(void)
 			DA380Threshold =32768;
 			break;
 		case GSENSOR_SENSITIVITY_LOW:
-			DA380Threshold =3500;//25
+			DA380Threshold =3300;//25
 			break;
 		case GSENSOR_SENSITIVITY_MED:
 			DA380Threshold =2200;//20

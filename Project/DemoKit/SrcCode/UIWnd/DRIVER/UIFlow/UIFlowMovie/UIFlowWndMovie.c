@@ -2380,7 +2380,7 @@ INT32 UIFlowWndMovie_RecModeTrig(VControl *pCtrl, UINT32 paramNum, UINT32 *param
         debug_msg("vincent start normal recording  1***************************************\r\n");
         SysSetFlag(FL_MOVIE_TIMELAPSE_REC, MOVIE_TIMELAPSEREC_OFF);
         Ux_SendEvent(pCtrl, NVTEVT_KEY_SHUTTER2, 1, NVTEVT_KEY_PRESS);//stop rec
-        
+        Delay_DelayMs(1000);
         debug_msg("vincent start normal recording  2***************************************\r\n");
         Ux_SendEvent(pCtrl, NVTEVT_KEY_SHUTTER2, 1, NVTEVT_KEY_PRESS);//start rec
     }

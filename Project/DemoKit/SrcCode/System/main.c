@@ -29,11 +29,6 @@
 
 extern UINT32 user_SecLoad[10];
 
-UINT8 GetFirstBoot(void)
-{
-    debug_msg("GetFirstBoot!\r\n");
-	return FirstBootFlag;
-}
 void _STOPTRACE __cyg_profile_func_enter(void *this_func, void *call_site)
 {
     debug_msg(">>> func = %08x, call = %08x ", this_func, call_site);

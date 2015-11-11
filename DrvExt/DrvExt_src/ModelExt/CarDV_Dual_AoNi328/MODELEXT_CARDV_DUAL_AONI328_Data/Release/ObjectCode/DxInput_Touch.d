@@ -1,5 +1,5 @@
 MODELEXT_CARDV_DUAL_AONI328_Data/Release/ObjectCode/DxInput_Touch.o: \
- e:/NT9665x_CarDV_FW_20150122_PW84_vincent/DrvExt/DrvExt_src/ModelExt/CarDV_Dual_AoNi328/DxInput_Touch.c \
+ e:/workspace/NT9665x_CarDV_FW_PW84_328/DrvExt/DrvExt_src/ModelExt/CarDV_Dual_AoNi328/DxInput_Touch.c \
  ../../../../Include/Common/Kernel/Kernel.h \
  ../../../../Include/Common/Type.h ../../../../Include/Common/StdCMac.h \
  ../../../../Include/Common/Platform.h \

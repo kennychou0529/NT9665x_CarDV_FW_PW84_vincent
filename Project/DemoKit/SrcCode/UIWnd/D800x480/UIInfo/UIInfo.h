@@ -206,7 +206,6 @@ typedef enum
     FL_MOVIE_GSENSOR,           // Movie GSensor
     FL_MOVIE_GPS,               // Movie GPS
     FL_MOVIE_PARKING,
-    FL_MOVIE_DUAL_VIEW_MODE,    //Movie Dual view mode //vincent@20150915-2  //44
 
     // Playback
     FL_DELETE_PHOTO,            // Delete Still

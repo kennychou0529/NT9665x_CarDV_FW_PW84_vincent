@@ -18,8 +18,10 @@
 #include "BG_xianke_on.c" 
 #include "BG_xianke_off.c"
 #else
-#include "welcome.c" 
-#include "Goodbye.c"
+//#include "welcome.c" 
+//#include "Goodbye.c"
+#include "aonion.c" 
+#include "aonioff.c"
 
 //#include "xianzhi_open.c"
 //#include "xianzhi_close.c"

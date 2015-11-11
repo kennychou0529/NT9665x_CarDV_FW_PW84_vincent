@@ -1,5 +1,5 @@
 MODELEXT_CARDV_DUAL_AONI328_Data/Release/ObjectCode/DxUsb.o: \
- e:/NT9665x_CarDV_FW_20150122_PW84_vincent/DrvExt/DrvExt_src/ModelExt/CarDV_Dual_AoNi328/DxUsb.c \
+ e:/workspace/NT9665x_CarDV_FW_PW84_328/DrvExt/DrvExt_src/ModelExt/CarDV_Dual_AoNi328/DxUsb.c \
  ../../../../Include/DrvExt/Enum/UsbDevDef.h \
  ../../../../Include/Drv/Driver_Sys/usb.h \
  ../../../../Include/Common/Type.h ../../../../Include/Common/StdCMac.h \

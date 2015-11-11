@@ -794,7 +794,7 @@ INT32 SetupExe_OnSysReset(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
     System_OnStrgInit_PS();
     #endif
     Reset_MenuInfo();
-    
+#if 1   
     //vincent@20150911-6 begin
     #if (_SENSORLIB2_ != _SENSORLIB2_DUMMY_)
     if (UI_GetData(FL_MOVIE_DUAL_REC))
@@ -810,7 +810,7 @@ INT32 SetupExe_OnSysReset(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
     }
     #endif
     //vincent@20150911-6 end
-    
+#endif   
     #if ((_DUAL_CARD_FUNC_ == ENABLE) && (_CHIP_ == _CHIP_650_))
     System_OnStrgExit_PS(); // Release bus to SD card using
     if (SysGetFlag(FL_DualCardMain) == MAIN_CARD_2)

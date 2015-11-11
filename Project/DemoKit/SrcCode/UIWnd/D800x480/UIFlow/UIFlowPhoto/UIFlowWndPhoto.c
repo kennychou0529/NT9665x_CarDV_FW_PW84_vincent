@@ -1112,28 +1112,7 @@ INT32 UIFlowWndPhoto_ReverseGear(VControl *pCtrl, UINT32 paramNum, UINT32 *param
         uiLastPipViewStyle = PipView_GetStyle();
         //sensor change to sensor2 TV out
         debug_msg("-----------sensoer tv out-------\r\n");
-
-        #if(_MODEL_DSC_ == _MODEL_DUAL_AONI328_)//vincent@20150915-2
-        switch(SysGetFlag(FL_MOVIE_DUAL_VIEW_MODE))
-        {
-            case MOVIE_DUAL_VIEW_1T1S2B:
-                PipView_SetStyle(PIP_STYLE_1T1S2B);
-                break;
-            case MOVIE_DUAL_VIEW_2T1B2S:
-                PipView_SetStyle(PIP_STYLE_2T1B2S);
-                break;
-            case MOVIE_DUAL_VIEW_1T1F:
-                PipView_SetStyle(PIP_STYLE_1T1F);
-                break;
-            case MOVIE_DUAL_VIEW_2T2F:
-            default:
-                PipView_SetStyle(PIP_STYLE_2T2F);
-                break;
-        }
-       #else
         PipView_SetStyle(PIP_STYLE_2T2F);
-       #endif
-       
         GPIOMap_TurnOnLCDBacklight();
         GxCustom_SetControl(GXCUSTOM_CTRL_AUTOLCDOFF_RESET,0);
         bCarGuideLineMode  = TRUE;

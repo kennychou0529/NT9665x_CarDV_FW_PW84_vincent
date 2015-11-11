@@ -947,26 +947,28 @@ void System_DetReverseGear(void)
         if(bFirstPowerOn==TRUE)
         {
 		bFirstPowerOn=FALSE;
-	       uiReverseGearPrevSts = uiReverseGearCurSts;		
-	 }
-	 else
-	 {
-		 if((System_GetState(SYS_STATE_CURRMODE)!=PRIMARY_MODE_MOVIE)&&(bChangeMode==FALSE))
-		 {
-		       bChangeMode=TRUE;
+	    uiReverseGearPrevSts = uiReverseGearCurSts;	
+	 	}
+		else
+		{
+		 	if((System_GetState(SYS_STATE_CURRMODE)!=PRIMARY_MODE_MOVIE)&&(bChangeMode==FALSE))
+		 	{
+		       	bChangeMode=TRUE;
 	    		//Ux_SendEvent(&UISetupObjCtrl,NVTEVT_EXE_CHANGEDSCMODE,1,DSCMODE_CHGTO_NEXT);
-	        	Ux_SendEvent(0, NVTEVT_SYSTEM_MODE, 1, PRIMARY_MODE_MOVIE);			
-		 }
-		 else if(bChangeMode==TRUE)
-		 {
-			bChangeMode=FALSE;
-		 }
-		 else
-		 {
+	        	Ux_SendEvent(0, NVTEVT_SYSTEM_MODE, 1, PRIMARY_MODE_MOVIE);
+				debug_msg("magic_20151030_1\r\n");
+		 	}
+		 	else if(bChangeMode==TRUE)
+		 	{
+				bChangeMode=FALSE;
+		 	}
+		 	else
+		 	{
 	        	Ux_PostEvent(NVTEVT_REVERSEGEAR, 1,uiReverseGearCurSts);
 	        	uiReverseGearPrevSts = uiReverseGearCurSts;
-		 }
-	 }
+				
+		 	}
+	 	}
     }
 }
 #endif

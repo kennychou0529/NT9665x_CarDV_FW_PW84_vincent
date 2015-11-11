@@ -175,6 +175,19 @@ extern BOOL m_bACPlug;
 #define UPDATE_FILE  "A:\\logo.jpg"
 #define UPDATE_FILE2  "A:\\logo2.jpg"
 extern BOOL bCarGuideLineMode ;
+BOOL gbNeedToRecordMovie=FALSE;
+static BOOL ParkingBoot = FALSE;
+void MovieExe_OnSetParkingBoot(BOOL enable);
+BOOL MovieExe_OnGetParkingBoot(void);
+
+void MovieExe_OnSetParkingBoot(BOOL enable)
+{
+	ParkingBoot = enable;	
+}
+BOOL MovieExe_OnGetParkingBoot(void)
+{
+	return ParkingBoot;
+}
 
 #if (_SENSORLIB2_ != _SENSORLIB2_DUMMY_)
 void UIFlowMovie_ReverseGearDet(void)
@@ -187,27 +200,7 @@ void UIFlowMovie_ReverseGearDet(void)
         uiLastPipViewStyle = PipView_GetStyle();
         //sensor change to sensor2 TV out
         debug_msg("-----------sensoer tv out-------\r\n");
-       #if(_MODEL_DSC_ == _MODEL_DUAL_AONI328_)//vincent@20150915-2
-        switch(SysGetFlag(FL_MOVIE_DUAL_VIEW_MODE))
-        {
-            case MOVIE_DUAL_VIEW_1T1S2B:
-                PipView_SetStyle(PIP_STYLE_1T1S2B);
-                break;
-            case MOVIE_DUAL_VIEW_2T1B2S:
-                PipView_SetStyle(PIP_STYLE_2T1B2S);
-                break;
-            case MOVIE_DUAL_VIEW_1T1F:
-                PipView_SetStyle(PIP_STYLE_1T1F);
-                break;
-            case MOVIE_DUAL_VIEW_2T2F:
-            default:
-                PipView_SetStyle(PIP_STYLE_2T2F);
-                break;
-        }
-       #else
         PipView_SetStyle(PIP_STYLE_2T2F);
-       #endif
-        
         GPIOMap_TurnOnLCDBacklight();
         GxCustom_SetControl(GXCUSTOM_CTRL_AUTOLCDOFF_RESET,0);
         bCarGuideLineMode  = TRUE;
@@ -764,8 +757,15 @@ INT32 UIFlowWndMovie_OnOpen(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray
 	
     if (SysGetFlag(FL_MOVIE_MOTION_DET) == MOVIE_MOTIONDET_ON)
     {
-        g_uiRecordIngMotionDet = TRUE;
-    } else {
+    	g_uiRecordIngMotionDet = TRUE;
+		
+    	if(GetFirstCrashMode() == 1)
+    	{
+			g_uiRecordIngMotionDet = FALSE;        	
+    	}
+    } 
+	else 
+	{
         g_uiRecordIngMotionDet = FALSE;
     }
 
@@ -821,34 +821,24 @@ INT32 UIFlowWndMovie_OnOpen(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray
 	    {
 	    #if (_SENSORLIB2_ != _SENSORLIB2_DUMMY_)		
 		    if (Sensor_CheckExtSensor())
+		    {
+		    	if(SysGetFlag(FL_MOVIE_DUAL_REC))
 		    	{
-		    	    if(SysGetFlag(FL_MOVIE_DUAL_REC))
-		    	    {
-                       #if(_MODEL_DSC_ == _MODEL_DUAL_AONI328_)//vincent@20150915-2
-                        switch(SysGetFlag(FL_MOVIE_DUAL_VIEW_MODE))
-                        {
-                            case MOVIE_DUAL_VIEW_1T1S2B:
-                                PipView_SetStyle(PIP_STYLE_1T1S2B);
-                                break;
-                            case MOVIE_DUAL_VIEW_2T1B2S:
-                                PipView_SetStyle(PIP_STYLE_2T1B2S);
-                                break;
-                            case MOVIE_DUAL_VIEW_1T1F:
-                                PipView_SetStyle(PIP_STYLE_1T1F);
-                                break;
-                            case MOVIE_DUAL_VIEW_2T2F:
-                            default:
-                                PipView_SetStyle(PIP_STYLE_2T2F);
-                                break;
-                        }
-                       #else
-                        PipView_SetStyle(PIP_STYLE_2T1B2S);
-                       #endif
-				        //PipView_SetStyle(PIP_STYLE_2T1B2S);	
-			        }
-		    	}
+					PipView_SetStyle(PIP_STYLE_2T1B2S);	
+				}
+		    }
+			else
+			{
+				PipView_SetStyle(PIP_STYLE_1T1F);	
+				gbNeedToRecordMovie = TRUE;
+			}
 		#endif	
 	    }
+    }
+	if(gbNeedToRecordMovie==TRUE)
+    {
+    	  gbNeedToRecordMovie=FALSE;
+	  Ux_PostEvent(NVTEVT_KEY_SHUTTER2, 1, NVTEVT_KEY_PRESS);
     }
     Ux_DefaultEvent(pCtrl,NVTEVT_OPEN_WINDOW,paramNum,paramArray);
     return NVTEVT_CONSUME;
@@ -964,7 +954,7 @@ INT32 UIFlowWndMovie_OnKeyMenu(VControl *pCtrl, UINT32 paramNum, UINT32 *paramAr
 			g_bgsensor = TRUE;     
 		       MediaRec_SetCrash();	
 			FlowMovie_IconDrawLockFile();
-		     }					
+		     }	
 
 	    break;		
 #endif
@@ -973,36 +963,32 @@ INT32 UIFlowWndMovie_OnKeyMenu(VControl *pCtrl, UINT32 paramNum, UINT32 *paramAr
 
 #if (_MODEL_DSC_ == _MODEL_DUAL_AONI328_)
      case NVTEVT_KEY_CONTINUE:
-            
-            #if (_SENSORLIB2_ != _SENSORLIB2_DUMMY_)			
-            debug_msg("-->System_OnPipSetting : %d..\r\n",PipView_GetStyle());	
-	        if (Sensor_CheckExtSensor())
-	    	{
-    		    switch(PipView_GetStyle())
-    		    {    
-    			    case PIP_STYLE_1T1F://PIP_STYLE_1T1B2S:
-    			    SysSetFlag(FL_MOVIE_DUAL_VIEW_MODE, MOVIE_DUAL_VIEW_1T1S2B);//vincent@20150915-2
-    				PipView_SetStyle(PIP_STYLE_1T1S2B);  //A+B    A small		
-    				break;
-    				
-    			    case PIP_STYLE_1T1S2B:
-                    SysSetFlag(FL_MOVIE_DUAL_VIEW_MODE, MOVIE_DUAL_VIEW_2T2F);//vincent@20150915-2
-    				PipView_SetStyle(PIP_STYLE_2T2F); //only B
-    				break;
-    				
-    			    case PIP_STYLE_2T2F:
-                    SysSetFlag(FL_MOVIE_DUAL_VIEW_MODE, MOVIE_DUAL_VIEW_2T1B2S);//vincent@20150915-2
-    				PipView_SetStyle(PIP_STYLE_2T1B2S); //A+B  B small 		
-    				break;
+       debug_msg("-->System_OnPipSetting : %d..\r\n",PipView_GetStyle());	
+#if 1
+#if (_SENSORLIB2_ != _SENSORLIB2_DUMMY_)			 
+		    if (Sensor_CheckExtSensor())
+		    	{
+			    switch(PipView_GetStyle())
+			    {    
+				    case PIP_STYLE_1T1F://PIP_STYLE_1T1B2S:
+					PipView_SetStyle(PIP_STYLE_1T1S2B);  //A+B    A small		
+					break;
+					
+				    case PIP_STYLE_1T1S2B:
+					PipView_SetStyle(PIP_STYLE_2T2F); //only B
+					break;
+					
+				    case PIP_STYLE_2T2F:
+					PipView_SetStyle(PIP_STYLE_2T1B2S); //A+B  B small 		
+					break;
 
-    			    case PIP_STYLE_2T1B2S:
-                    SysSetFlag(FL_MOVIE_DUAL_VIEW_MODE, MOVIE_DUAL_VIEW_1T1F);//vincent@20150915-2
-    				PipView_SetStyle(PIP_STYLE_1T1F);// only A 		
-    				break;		
-    		    }    
-	    	}
-            #endif	
-            
+				    case PIP_STYLE_2T1B2S:
+					PipView_SetStyle(PIP_STYLE_1T1F);// only A 		
+					break;		
+			    }    
+		    	}
+	    #endif
+#endif
         break;
 #endif           
     }
@@ -1865,12 +1851,28 @@ INT32 UIFlowWndMovie_OnMovieOneSec(VControl *pCtrl, UINT32 paramNum, UINT32 *par
             uiRecSecond = paramArray[0];
 			uiCyclicRecTime = Movie_GetCyclicRecTime();
 			
-			if((uiRecSecond == 20) && (SysGetFlag(FL_MOVIE_PARKING) == MOVIE_PARKING_ON)  && (FlowMovie_GetFirstBootRecFlag() == TRUE))
+			if((uiRecSecond == 20) && (SysGetFlag(FL_MOVIE_PARKING) == MOVIE_PARKING_ON)  && (GetFirstCrashMode() == 1))
 			{
-				FlowMovie_SetFirstBootRecFlag(FALSE);
-				
 				FlowMovie_StopRec();
-				FlowMovie_StartRec();
+			    //FlowMovie_SetFirstBootRecFlag(FALSE);
+				SetFirstCrashMode();
+				if (SysGetFlag(FL_MOVIE_MOTION_DET) == MOVIE_MOTIONDET_ON)
+    			{
+        			g_uiRecordIngMotionDet = TRUE;
+    			} 
+				
+				if ( FALSE == AE_Wait_Stable(3, 60) )
+                    DBG_ERR("Movie one seocond EVENT: AE do not stable\r\n");
+		
+            	GxUSB_UpdateConnectType();
+            	if(GxUSB_GetConnectType()== USB_CONNECT_NONE)
+            	{			
+		   			Ux_PostEvent(NVTEVT_SYSTEM_SHUTDOWN, 1, 0);
+            	}                  
+		    	else
+		    	{
+    	     		Ux_PostEvent(NVTEVT_KEY_SHUTTER2, 1, NVTEVT_KEY_PRESS);
+		    	}
 				
 			}
 			
@@ -1921,6 +1923,7 @@ INT32 UIFlowWndMovie_OnMovieOneSec(VControl *pCtrl, UINT32 paramNum, UINT32 *par
         //{        
       		FlowMovie_IconDrawRecTime();
       	 // }
+#if 0
 	  if(Gsensor_GetCrashMode()==TRUE)
 	  {
 		if((UIFlowWndMovie_IsGsensorTrig()==FALSE)&&(uiRecSecond==1))	
@@ -1946,17 +1949,17 @@ INT32 UIFlowWndMovie_OnMovieOneSec(VControl *pCtrl, UINT32 paramNum, UINT32 *par
 		   	Ux_PostEvent(NVTEVT_SYSTEM_SHUTDOWN, 1, 0);
 		#else
                   GxUSB_UpdateConnectType();
-                  if(GxUSB_GetConnectType()== USB_CONNECT_NONE)
-                  {			
-		   	Ux_PostEvent(NVTEVT_SYSTEM_SHUTDOWN, 1, 0);
-                  }                  
+            if(GxUSB_GetConnectType()== USB_CONNECT_NONE)
+            {			
+		   		Ux_PostEvent(NVTEVT_SYSTEM_SHUTDOWN, 1, 0);
+            }                  
 		    else
 		    {
-    	     		Ux_PostEvent(NVTEVT_KEY_SHUTTER2, 1, NVTEVT_KEY_PRESS);
+    	     	Ux_PostEvent(NVTEVT_KEY_SHUTTER2, 1, NVTEVT_KEY_PRESS);
 		    }
 		#endif	
 	}		
-	  
+#endif	  
         if (UxCtrl_IsShow(&UIFlowWndMovie_StaticIcon_PIMCCtrl))
             FlowMovie_DrawPIM(FALSE);
         break;
@@ -2262,7 +2265,7 @@ INT32 UIFlowWndMovie_OnTimer(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArra
         {
             static UINT32  uiMotionDetGo = 0;
             static UINT32  uiMotionDetStop = 0;
-
+           
             if (MD_Process()==TRUE)
             {
                  uiMotionDetGo++;
@@ -2321,11 +2324,11 @@ INT32 UIFlowWndMovie_OnTimer(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArra
         break;
 
     case NVTEVT_1SEC_TIMER:
-		/*
+		
 #if (_SENSORLIB2_ != _SENSORLIB2_DUMMY_)		
 	  UIFlowMovie_ReverseGearDet();
 #endif
-*/
+
         FlowMovie_OnTimer1SecIndex();
         // Isiah, implement YUV merge mode of recording func.
         if(MediaRec_IsRecording() && FlowMovie_RecGetYUVMergeMode())
@@ -2619,28 +2622,7 @@ INT32 UIFlowWndMovie_ReverseGear(VControl *pCtrl, UINT32 paramNum, UINT32 *param
         uiLastPipViewStyle = PipView_GetStyle();
         //sensor change to sensor2 TV out
         debug_msg("---Reverse gear shitf, TRUE..\r\n");
-
-       #if(_MODEL_DSC_ == _MODEL_DUAL_AONI328_)//vincent@20150915-2
-        switch(SysGetFlag(FL_MOVIE_DUAL_VIEW_MODE))
-        {
-            case MOVIE_DUAL_VIEW_1T1S2B:
-                PipView_SetStyle(PIP_STYLE_1T1S2B);
-                break;
-            case MOVIE_DUAL_VIEW_2T1B2S:
-                PipView_SetStyle(PIP_STYLE_2T1B2S);
-                break;
-            case MOVIE_DUAL_VIEW_1T1F:
-                PipView_SetStyle(PIP_STYLE_1T1F);
-                break;
-            case MOVIE_DUAL_VIEW_2T2F:
-            default:
-                PipView_SetStyle(PIP_STYLE_2T2F);
-                break;
-        }
-       #else
-         PipView_SetStyle(PIP_STYLE_2T2F);
-       #endif
-       
+        PipView_SetStyle(PIP_STYLE_2T2F);
         GPIOMap_TurnOnLCDBacklight();
         GxCustom_SetControl(GXCUSTOM_CTRL_AUTOLCDOFF_RESET,0);
 	 SxTimer_SetFuncActive(SX_TIMER_DET_AUTOLCDOFF_ID,FALSE);		 

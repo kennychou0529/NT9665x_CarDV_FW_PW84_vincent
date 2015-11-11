@@ -1,0 +1,2 @@
+e:/workspace/NT9665x_CarDV_FW_PW84_328/LibExt/LibExt_src/PluginPhoto/AE_AR0330P_EVB_FF/ae_AR0330P_EVB_FF.c: In function 'AE_SetMovieLog':
+e:/workspace/NT9665x_CarDV_FW_PW84_328/LibExt/LibExt_src/PluginPhoto/AE_AR0330P_EVB_FF/ae_AR0330P_EVB_FF.c:100: warning: implicit declaration of function 'AWB_GetColorGian'

@@ -50,6 +50,7 @@ int SX_TIMER_DET_EXTSENSOR_ID = -1;
 void Sensor_DetExtSensor(void);
 SX_TIMER_ITEM(Sensor_DetExtSensor, Sensor_DetExtSensor, 10, TRUE)
 #endif
+extern BOOL gbNeedToRecordMovie;
 //void DscCommon_Open(void);
 void IPLCtrl_Open(void);
 void IPLCtrl_Close(void);
@@ -158,6 +159,7 @@ BOOL Sensor_CheckExtSensor(void)
 void Sensor_DetExtSensor(void)
 {
     static UINT32 bDebounceCount = 0;
+	static UINT8 SecondSensorflag = 0;
 #if 0//(_MODEL_DSC_ == _MODEL_DUAL_790S_)
     if (System_GetState(SYS_STATE_CURRMODE) != PRIMARY_MODE_MOVIE)
         return;
@@ -170,7 +172,16 @@ void Sensor_DetExtSensor(void)
             bDebounceCount++;
             if (bDebounceCount > DET_EXTSENSOR_DEBOUNCE_COUNT)
             {
+            	SecondSensorflag++;
                 g_bDetExtSensor = TRUE;
+				if(SecondSensorflag == 1)
+				{
+					gbNeedToRecordMovie = TRUE;
+				}
+				else
+				{
+					SecondSensorflag = 2;		
+				}
                 bDebounceCount = 0;
 
                 // re-enter movie mode
@@ -196,6 +207,7 @@ void Sensor_DetExtSensor(void)
             {
                 g_bDetExtSensor = FALSE;
                 bDebounceCount = 0;
+				SecondSensorflag = 0;
 
                 // re-enter movie mode
 #if 1//(_MODEL_DSC_ == _MODEL_DUAL_790S_)                

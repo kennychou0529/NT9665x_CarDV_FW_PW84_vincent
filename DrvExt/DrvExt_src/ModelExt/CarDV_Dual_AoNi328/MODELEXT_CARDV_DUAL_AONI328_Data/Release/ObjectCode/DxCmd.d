@@ -1,5 +1,5 @@
 MODELEXT_CARDV_DUAL_AONI328_Data/Release/ObjectCode/DxCmd.o: \
- e:/NT9665x_CarDV_FW_20150122_PW84_vincent/DrvExt/DrvExt_src/ModelExt/CarDV_Dual_AoNi328/DxCmd.c \
+ e:/workspace/NT9665x_CarDV_FW_PW84_328/DrvExt/DrvExt_src/ModelExt/CarDV_Dual_AoNi328/DxCmd.c \
  ../../../../Include/Common/LibC/stdio.h \
  ../../../../Include/Common/LibC/stdarg.h \
  ../../../../Include/Common/LibC/stddef.h \
@@ -24,7 +24,7 @@ MODELEXT_CARDV_DUAL_AONI328_Data/Release/ObjectCode/DxCmd.o: \
  ../../../../Include/Drv/Driver_Sys/ADC.h \
  ../../../../Include/Drv/Driver_Sys/Top.h \
  ../../../../Include/Drv/Driver_Sys/Driver.h \
- e:/NT9665x_CarDV_FW_20150122_PW84_vincent/DrvExt/DrvExt_src/ModelExt/CarDV_Dual_AoNi328/IoCfg.h \
+ e:/workspace/NT9665x_CarDV_FW_PW84_328/DrvExt/DrvExt_src/ModelExt/CarDV_Dual_AoNi328/IoCfg.h \
  ../../../../Include/DrvExt/ModelExt/IOInit.h \
  ../../../../Include/Drv/Driver_Sys/pad.h \
  ../../../../Include/Drv/Driver_Sys/top.h \
@@ -113,7 +113,7 @@ MODELEXT_CARDV_DUAL_AONI328_Data/Release/ObjectCode/DxCmd.o: \
 
 ../../../../Include/Drv/Driver_Sys/Driver.h:
 
-e:/NT9665x_CarDV_FW_20150122_PW84_vincent/DrvExt/DrvExt_src/ModelExt/CarDV_Dual_AoNi328/IoCfg.h:
+e:/workspace/NT9665x_CarDV_FW_PW84_328/DrvExt/DrvExt_src/ModelExt/CarDV_Dual_AoNi328/IoCfg.h:
 
 ../../../../Include/DrvExt/ModelExt/IOInit.h:
 

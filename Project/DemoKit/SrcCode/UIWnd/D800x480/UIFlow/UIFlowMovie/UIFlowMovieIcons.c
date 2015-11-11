@@ -472,7 +472,7 @@ void FlowMovie_UpdateIcons(BOOL bShow)
 
 	  FlowMovie_IconDrawParkingMonitor();	
 #if (_SENSORLIB2_ != _SENSORLIB2_DUMMY_)	     
-        if(GPIOMap_IsReverseGear()==FALSE) 
+      if(GPIOMap_IsReverseGear()==FALSE)  
 	  FlowMovie_IconHideGuideLine();
 	  else
 	  FlowMovie_IconDrawGuideLine();	 

@@ -737,14 +737,21 @@ const tPANEL_CMD tCmdModeDSI[] =
 		    {DSICMD_DATA,   0x15},	//15		
 		    {DSICMD_DATA,   0x12},			
 		    {DSICMD_DATA,   0x17},			
-		    {DSICMD_DATA,   0x01},										
-					
+		    {DSICMD_DATA,   0x01},	
+
 		    //			
 	    {DSICMD_CMD,    0x11}, //Sleep Out			
     {CMDDELAY_MS,   150},						
 		    //			
 	    {DSICMD_CMD,    0x29}, //Display On			
     {CMDDELAY_MS,   150},
+
+      // brightness			
+	    {DSICMD_CMD,    0x53},			
+		    {DSICMD_DATA,   0x20},
+		{DSICMD_CMD,    0x51},			
+		    {DSICMD_DATA,   0xbb},
+		   
 
 #endif
 };

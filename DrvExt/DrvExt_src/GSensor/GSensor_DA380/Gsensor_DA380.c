@@ -20,7 +20,7 @@ extern BOOL g_bLapseRecFlag; //vincent@20150805-1
 extern short g_stGsenX;
 extern short g_stGsenY;
 extern short g_stGsenZ;
-
+static UINT8 gbFirstCrashMode = 0;
 #define LAPSE_REC_TRIG_VALUE   (17)  //vincent@20150805-1
 static GSENSOR_SENSITIVITY g_GSensorSensitivity = GSENSOR_SENSITIVITY_OFF;
 static BOOL gbCrashMode=FALSE;
@@ -29,6 +29,16 @@ static GSENSOR_OBJ g_GsensorDA380Obj = {GSensor_DA380_open, GSensor_DA380_close,
 	GSensor_DA380_ParkingMode, GSensor_DA380_CrashMode, GSensor_DA380_SetSensitivity,
 	GSensor_DA380_ClearCrashMode,GSensor_DA380_SetInterrupt};
 
+
+UINT8 GetFirstCrashMode(void)
+{
+	return gbFirstCrashMode;	
+}
+
+void SetFirstCrashMode(void)
+{
+	gbFirstCrashMode = 2;	
+}
 
 /*return value: 0: is ok    other: is failed*/
 int     i2c_read_byte_data( unsigned char addr, unsigned char *data){
@@ -127,10 +137,10 @@ int mir3da_chip_init(void){
 	unsigned char data=0;
 
 
-	if(mir3da_i2c_init()){
+	/*if(mir3da_i2c_init()){
 		return -1;
 		debug_msg("------mir3da i2c init error-----\r\n"); 
-	}
+	}*/
 
 	mir3da_register_read(NSA_REG_WHO_AM_I,&data);
 	if(data != 0x13){
@@ -145,20 +155,18 @@ int mir3da_chip_init(void){
 	Delay_DelayMs(5);
 
 	res |= mir3da_register_mask_write(NSA_REG_G_RANGE, 0x03, 0x02);
-	//res |= mir3da_register_mask_write(NSA_REG_POWERMODE_BW, 0xFF, 0x1E);
-	res |= mir3da_register_mask_write(NSA_REG_POWERMODE_BW, 0xFF, 0x5E);//magic-20151008 add
+	res |= mir3da_register_mask_write(NSA_REG_POWERMODE_BW, 0xFF, 0x1E);
 	res |= mir3da_register_mask_write(NSA_REG_ODR_AXIS_DISABLE, 0xFF, 0x07);
 	
 	//res |= mir3da_register_mask_write(NSA_REG_INT_PIN_CONFIG, 0x0F, 0x00);//vincent@20150917-1
 	//res |= mir3da_register_mask_write(NSA_REG_INT_LATCH, 0x8F, 0x85);
-	res |= mir3da_register_mask_write(NSA_REG_INT_PIN_CONFIG, 0x0F, 0x05);//set int_pin level
-	res |= mir3da_register_mask_write(NSA_REG_INT_LATCH, 0x8F, 0x86);//clear latch and set latch mode
+	res |= mir3da_register_mask_write(NSA_REG_INT_PIN_CONFIG, 0x0F, 0x00);//set int_pin level
+	res |= mir3da_register_mask_write(NSA_REG_INT_LATCH, 0x8F, 0x85);//clear latch and set latch mode
 	
 	
 	res |= mir3da_register_mask_write(NSA_REG_ENGINEERING_MODE, 0xFF, 0x83);
 	res |= mir3da_register_mask_write(NSA_REG_ENGINEERING_MODE, 0xFF, 0x69);
 	res |= mir3da_register_mask_write(NSA_REG_ENGINEERING_MODE, 0xFF, 0xBD);
-	res |= mir3da_register_mask_write(NSA_REG_SWAP_POLARITY, 0xFF, 0x00);//magic-20151008 add
 
 	return res;	    	
 }
@@ -167,9 +175,9 @@ int mir3da_chip_init(void){
 int mir3da_open_interrupt(int num){
 	int   res = 0;
 
-	res = mir3da_register_write(NSA_REG_INTERRUPT_SETTINGS1,0x03);
+	res = mir3da_register_write(NSA_REG_INTERRUPT_SETTINGS1,0x03);//0x03
 	res = mir3da_register_write(NSA_REG_ACTIVE_DURATION,0x01 );// 0x03
-	res = mir3da_register_write(NSA_REG_ACTIVE_THRESHOLD,0x26 );////DEBUG//38//DF
+	res = mir3da_register_write(NSA_REG_ACTIVE_THRESHOLD,0x10 );////DEBUG//38//DF
 	res = mir3da_register_write(NSA_REG_INTERRUPT_SETTINGS2,0xA0); // interuppt plus  keep 1 second //vincent@20150917-1
 			
 	switch(num){
@@ -430,16 +438,18 @@ void GSensor_DA380_PowerDown(void)
 
 BOOL GSensor_DA380_open(void)
 {
-
    // open Gsensor interface
    GSensor_DA380_OpenInterface();
-
    gbCrashMode=GSensor_Read_Interrupte();
-    debug_msg("GSensor_DA380_open:%d..\r\n",gbCrashMode);
-
+   if((gbCrashMode == TRUE)&&(gbFirstCrashMode == 0))
+   {
+		gbFirstCrashMode = 1;	
+   }
+  
+   debug_msg("GSensor_DA380_open:%d..\r\n",gbCrashMode);
    // Gsensor init
    GSensor_DA380_Init();
-
+  
    return TRUE;
 }
 

@@ -1,5 +1,5 @@
 Disp_IFDSI_LCD1_HX8369B_Data/Release/ObjectCode/dispdev_IFdsi.o: \
- e:/PARTNERWIN_/NT9665x_CarDV_FW_20150122_PW84/DrvExt/DrvExt_src/DispDevPanel/Disp_IFDSI_LCD1_HX8369B/../dispdev_IFdsi.c \
+ e:/workspace/NT9665x_CarDV_FW_PW84_328/DrvExt/DrvExt_src/DispDevPanel/Disp_IFDSI_LCD1_HX8369B/../dispdev_IFdsi.c \
  ../../../../Include/Common/Kernel/kernel.h \
  ../../../../Include/Common/Type.h ../../../../Include/Common/StdCMac.h \
  ../../../../Include/Common/Platform.h \
@@ -43,7 +43,7 @@ Disp_IFDSI_LCD1_HX8369B_Data/Release/ObjectCode/dispdev_IFdsi.o: \
  ../../../../Include/Drv/Driver_Sys/sif.h \
  ../../../../Include/Drv/Driver_Sys/hdmitx.h \
  ../../../../Include/Drv/Driver_Sys/top.h \
- e:/PARTNERWIN_/NT9665x_CarDV_FW_20150122_PW84/DrvExt/DrvExt_src/DispDevPanel/Disp_IFDSI_LCD1_HX8369B/../dispdev_ifdsi.h \
+ e:/workspace/NT9665x_CarDV_FW_PW84_328/DrvExt/DrvExt_src/DispDevPanel/Disp_IFDSI_LCD1_HX8369B/../dispdev_ifdsi.h \
  ../Disp_PANELCOMMON/dispdev_panlcomn.h \
  ../../../../Include/Drv/Dispobj/dispdev_ioctrl.h \
  ../../../../Include/Drv/Dispobj/display.h \
@@ -146,7 +146,7 @@ Disp_IFDSI_LCD1_HX8369B_Data/Release/ObjectCode/dispdev_IFdsi.o: \
 
 ../../../../Include/Drv/Driver_Sys/top.h:
 
-e:/PARTNERWIN_/NT9665x_CarDV_FW_20150122_PW84/DrvExt/DrvExt_src/DispDevPanel/Disp_IFDSI_LCD1_HX8369B/../dispdev_ifdsi.h:
+e:/workspace/NT9665x_CarDV_FW_PW84_328/DrvExt/DrvExt_src/DispDevPanel/Disp_IFDSI_LCD1_HX8369B/../dispdev_ifdsi.h:
 
 ../Disp_PANELCOMMON/dispdev_panlcomn.h:
 

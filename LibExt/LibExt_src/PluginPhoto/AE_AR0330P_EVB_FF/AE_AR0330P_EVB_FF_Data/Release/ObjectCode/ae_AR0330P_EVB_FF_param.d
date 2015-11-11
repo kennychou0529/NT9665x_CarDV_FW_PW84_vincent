@@ -1,10 +1,10 @@
 AE_AR0330P_EVB_FF_Data/Release/ObjectCode/ae_AR0330P_EVB_FF_param.o: \
- e:/NT9665x_CarDV_FW_20150122_PW84_vincent/LibExt/LibExt_src/PluginPhoto/AE_AR0330P_EVB_FF/ae_AR0330P_EVB_FF_param.c \
+ e:/workspace/NT9665x_CarDV_FW_PW84_328/LibExt/LibExt_src/PluginPhoto/AE_AR0330P_EVB_FF/ae_AR0330P_EVB_FF_param.c \
  ../../../../Include/Common/type.h ../../../../Include/Common/StdCMac.h \
  ../../../../Include/Common/Platform.h \
  ../../../../Include/Common/Kernel/mIType.h \
  ../../../../Include/Lib/PluginPhoto/AEAlg/Ae_alg.h \
- e:/NT9665x_CarDV_FW_20150122_PW84_vincent/LibExt/LibExt_src/PluginPhoto/AE_AR0330P_EVB_FF/Ae_AR0330P_EVB_FF_int.h \
+ e:/workspace/NT9665x_CarDV_FW_PW84_328/LibExt/LibExt_src/PluginPhoto/AE_AR0330P_EVB_FF/Ae_AR0330P_EVB_FF_int.h \
  ../../../../Include/Drv/Sensor/Sensor.h \
  ../../../../Include/Common/Type.h \
  ../../../../Include/Common/Kernel/ErrorNo.h \
@@ -23,7 +23,7 @@ AE_AR0330P_EVB_FF_Data/Release/ObjectCode/ae_AR0330P_EVB_FF_param.o: \
 
 ../../../../Include/Lib/PluginPhoto/AEAlg/Ae_alg.h:
 
-e:/NT9665x_CarDV_FW_20150122_PW84_vincent/LibExt/LibExt_src/PluginPhoto/AE_AR0330P_EVB_FF/Ae_AR0330P_EVB_FF_int.h:
+e:/workspace/NT9665x_CarDV_FW_PW84_328/LibExt/LibExt_src/PluginPhoto/AE_AR0330P_EVB_FF/Ae_AR0330P_EVB_FF_int.h:
 
 ../../../../Include/Drv/Sensor/Sensor.h:
 

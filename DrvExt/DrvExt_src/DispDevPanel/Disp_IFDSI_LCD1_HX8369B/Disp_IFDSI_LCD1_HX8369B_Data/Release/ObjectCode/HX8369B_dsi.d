@@ -1,5 +1,5 @@
 Disp_IFDSI_LCD1_HX8369B_Data/Release/ObjectCode/HX8369B_dsi.o: \
- e:/NT9665x_CarDV_FW_20150122_PW84/DrvExt/DrvExt_src/DispDevPanel/Disp_IFDSI_LCD1_HX8369B/HX8369B_dsi.c \
+ e:/workspace/NT9665x_CarDV_FW_PW84_328/DrvExt/DrvExt_src/DispDevPanel/Disp_IFDSI_LCD1_HX8369B/HX8369B_dsi.c \
  ../../../../Include/Common/Debug/debug.h \
  ../../../../Include/Common/Type.h ../../../../Include/Common/StdCMac.h \
  ../../../../Include/Common/Platform.h \

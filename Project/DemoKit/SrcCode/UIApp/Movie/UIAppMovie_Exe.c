@@ -51,7 +51,6 @@ extern PHOTO_FUNC_INFO PhotoFuncInfo_ldws;
 #if (UVC_RECORD_FUNC == ENABLE)
 #include "UIAppUsbCam.h"
 #endif
-
 // Test codes
 #define MOVIE_TEST_ENABLE       DISABLE
 #define MOVIE_YUV_SIZE_MAX      (1920*1080*2)   // maximum YUV raw data size
@@ -60,7 +59,7 @@ extern PHOTO_FUNC_INFO PhotoFuncInfo_ldws;
 //#NT#2012/10/30#Calvin Chang#Generate Audio NR pattern by noises of zoom, focus and iris -begin
 #define MOVIE_AUDIO_NR_PATTERN_ENABLE    DISABLE
 //#NT#2012/10/30#Calvin Chang -end
-
+extern UINT8 GetFirstCrashMode(void);
 extern int  UVAC_SetImageSize(UINT16 uhSize);
 extern void UIMovie_3DNRReset(void);
 extern BOOL Sensor_CheckExtSensor(void);
@@ -108,7 +107,7 @@ static char     sDirPath[40];
 static char     sFileName[40];
 static UINT32   g_uiFixedYUVFrameCount = 0;
 
-
+extern void MovieExe_OnSetParkingBoot(BOOL enable);
 extern void MovRec_SetTestMode(MEDIAREC_TESTMODE *pTestMode);
 extern void DscMovie_RegIPLChangeCB(MediaRecIPLChangeCB *pIPLChangeCB);
 extern void DscMovie_RegGetReadyBufCB(MediaRecIPLGetReadyCB *pGetReadyBufCB);
@@ -891,12 +890,7 @@ INT32 MovieExe_OnOpen(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
             SENSOR_INIT_OBJ SenObj;
             SENSOR_DRVTAB *SenTab;
 
-            if (!bFirstSetDualRecFlag)//vincent@20150925-2
-            {
-                Movie_SetDualRec(ON);
-                bFirstSetDualRecFlag = TRUE;
-            }
-            
+            Movie_SetDualRec(ON);
             SenObj = DrvSensor_GetObj2nd();
             SenTab = DrvSensor_GetTab2nd();
             Sensor_Open(SENSOR_ID_2, &SenObj, SenTab);
@@ -906,7 +900,6 @@ INT32 MovieExe_OnOpen(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
         {
             // forced disable dual recording if no 2nd sensor
             Movie_SetDualRec(OFF);
-            bFirstSetDualRecFlag = FALSE;//vincent@20150925-2
             g_bSensor2En = FALSE;
         }
 #endif
@@ -1931,23 +1924,23 @@ UINT32 Movie_GetCyclicRecTime(void)
         break;
 #else
     case MOVIE_CYCLICREC_3MIN:
-        uiCyclicRecTime = 180;
+        uiCyclicRecTime = 179;
         break;
 
     case MOVIE_CYCLICREC_5MIN:
-        uiCyclicRecTime = 300;
+        uiCyclicRecTime = 299;
         break;
 
     case MOVIE_CYCLICREC_10MIN:
-        uiCyclicRecTime = 600;
+        uiCyclicRecTime = 599;
         break;
 
     case MOVIE_CYCLICREC_OFF:
-		uiCyclicRecTime = 600;
+		uiCyclicRecTime = 599;
         break;
 
     default:
-        uiCyclicRecTime = 300;
+        uiCyclicRecTime = 299;
         break;
 #endif		
     }
@@ -2107,10 +2100,12 @@ INT32 MovieExe_OnRecStart(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
     }
     //#NT#2013/05/15#Calvin Chang -end
     Movie_SetRecParam();
-	if( (SysGetFlag(FL_MOVIE_PARKING) == MOVIE_PARKING_ON)  && (FlowMovie_GetFirstBootRecFlag() == TRUE))
+	debug_msg("IsParking = %d\r\n",Gsensor_GetCrashMode());
+	if( (SysGetFlag(FL_MOVIE_PARKING) == MOVIE_PARKING_ON) && (GetFirstCrashMode() == 1))
 	{
 		MediaRec_SetCrash();
 		FlowMovie_IconDrawLockFile();
+		MovieExe_OnSetParkingBoot();
 	}
 	
     Movie_SetQPInitLevel();
@@ -2148,7 +2143,7 @@ INT32 MovieExe_OnRecStart(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
     #if (_MODEL_DSC_ == _MODEL_CARDV_K12_)//vincent@20150916-2
     if ((SysGetFlag(FL_MOVIE_DATEIMPRINT) == MOVIE_DATEIMPRINT_ON)||(SysGetFlag(FL_CAR_NUM) == CAR_NUM_ON))
     #else
-    if (UI_GetData(FL_MOVIE_DATEIMPRINT) == MOVIE_DATEIMPRINT_ON)
+    if ((SysGetFlag(FL_MOVIE_DATEIMPRINT) == MOVIE_DATEIMPRINT_ON)||(SysGetFlag(FL_CAR_NUM) == CAR_NUM_ON))
     #endif
     {
         UINT32      uiStampAddr;

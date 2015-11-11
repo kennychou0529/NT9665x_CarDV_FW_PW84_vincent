@@ -131,8 +131,7 @@ void MovieStamp_Setup(UINT32 uiVidEncId, UINT32 uiFlag, UINT32 uiImageWidth, UIN
 		}
 		else
 		{
-			//strcpy(carnumber_stamp_str, SysGetNZHCarNoStamp());
-			strcpy(carnumber_stamp_str, SysGetZHCarNoStamp());
+			strcpy(carnumber_stamp_str, SysGetNZHCarNoStamp());
 		}
 	}
 	else
@@ -1163,17 +1162,24 @@ void MovieStamp_CopyData(UINT32 uiVidEncId, UINT32 yAddr, UINT32 cbAddr, UINT32 
             #else
 			if (SysGetFlag(FL_CAR_NUM) == CAR_NUM_ON)
 			{
-                switch (g_uiMovieStampSetup[uiVidEncId] & STAMP_DATE_FORMAT_MASK)
+				if (SysGetFlag(FL_MOVIE_DATEIMPRINT) == MOVIE_DATEIMPRINT_ON)
+				{
+               		switch (g_uiMovieStampSetup[uiVidEncId] & STAMP_DATE_FORMAT_MASK)
+                	{
+                	case STAMP_DD_MM_YY:
+                    	sprintf(&g_cMovieStampStr[uiVidEncId][0], "%s %s %02d/%02d/%04d %02d:%02d:%02d", MOVIE_STAMP_STRING,carnumber_stamp_str,CurDateTime.tm_mday, CurDateTime.tm_mon, CurDateTime.tm_year, CurDateTime.tm_hour, CurDateTime.tm_min, CurDateTime.tm_sec);
+                    	break;
+                	case STAMP_MM_DD_YY:
+                    	sprintf(&g_cMovieStampStr[uiVidEncId][0], "%s %s %02d/%02d/%04d %02d:%02d:%02d", MOVIE_STAMP_STRING,carnumber_stamp_str,CurDateTime.tm_mon, CurDateTime.tm_mday, CurDateTime.tm_year, CurDateTime.tm_hour, CurDateTime.tm_min, CurDateTime.tm_sec);
+                   	 	break;
+                	default:
+                    	sprintf(&g_cMovieStampStr[uiVidEncId][0], "%s %s %04d/%02d/%02d %02d:%02d:%02d", MOVIE_STAMP_STRING,carnumber_stamp_str,CurDateTime.tm_year, CurDateTime.tm_mon, CurDateTime.tm_mday, CurDateTime.tm_hour, CurDateTime.tm_min, CurDateTime.tm_sec);
+                    	break;
+                	}
+				}
+				else
                 {
-                case STAMP_DD_MM_YY:
-                    sprintf(&g_cMovieStampStr[uiVidEncId][0], "%s %s %02d/%02d/%04d %02d:%02d:%02d", MOVIE_STAMP_STRING,carnumber_stamp_str,CurDateTime.tm_mday, CurDateTime.tm_mon, CurDateTime.tm_year, CurDateTime.tm_hour, CurDateTime.tm_min, CurDateTime.tm_sec);
-                    break;
-                case STAMP_MM_DD_YY:
-                    sprintf(&g_cMovieStampStr[uiVidEncId][0], "%s %s %02d/%02d/%04d %02d:%02d:%02d", MOVIE_STAMP_STRING,carnumber_stamp_str,CurDateTime.tm_mon, CurDateTime.tm_mday, CurDateTime.tm_year, CurDateTime.tm_hour, CurDateTime.tm_min, CurDateTime.tm_sec);
-                    break;
-                default:
-                    sprintf(&g_cMovieStampStr[uiVidEncId][0], "%s %s %04d/%02d/%02d %02d:%02d:%02d", MOVIE_STAMP_STRING,carnumber_stamp_str,CurDateTime.tm_year, CurDateTime.tm_mon, CurDateTime.tm_mday, CurDateTime.tm_hour, CurDateTime.tm_min, CurDateTime.tm_sec);
-                    break;
+                    sprintf(&g_cMovieStampStr[uiVidEncId][0], "%s", carnumber_stamp_str);
                 }
 			}
 			else

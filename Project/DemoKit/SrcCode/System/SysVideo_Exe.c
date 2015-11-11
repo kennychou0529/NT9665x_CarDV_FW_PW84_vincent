@@ -737,7 +737,7 @@ INT32 System_OnVideoInsert(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
         }
 
     UI_LockEvent();
-
+   
     NewDevObj = (DX_HANDLE)(paramArray[0]);
 
     //close device
@@ -1208,9 +1208,10 @@ INT32 System_OnVideoAttach(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
         #endif
         //#NT#2015/01/21#KS Hung -end
 
-        if(SysGetFlag(FL_OPENING_LOGO)==OPENING_LOGO_ON)
+        /*if(SysGetFlag(FL_OPENING_LOGO)==OPENING_LOGO_ON)
         {
             #if(ANIMATION_POWER_ON == ENABLE)
+			debug_msg("magic_20151026_1");
             for (index=2; index<=POWER_ON_ANIMATION_PIC_NUMBER; index++)
             {
                 sprintf(szSectionID, "%s%d", g_szSecID, index);
@@ -1218,7 +1219,7 @@ INT32 System_OnVideoAttach(VControl *pCtrl, UINT32 paramNum, UINT32 *paramArray)
                 Delay_DelayMs(170);
             }
             #endif
-        }
+        }*/
 #endif
         UI_GfxInit();
         UI_DispInit();

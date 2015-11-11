@@ -288,7 +288,7 @@ void UI_SetData(UINT32 attribute,UINT32 value)
 {
     UIInfoTraceMsg("set UIParam[%d]= %d\r\n", attribute, value);
     currentInfo.UIParameter[attribute]=value;
-    Save_MenuInfo();//vincent@20150919-2  
+    //Save_MenuInfo();//vincent@20150919-2  
 }
 
 //-----------------------------------------------------------------------------
@@ -393,7 +393,7 @@ UINT32 GetBatteryLevel(void)
 void SysSetFlag(UINT32 uiFlag, UINT32 uiValue)
 {
     currentInfo.UIParameter[uiFlag]=uiValue;
-    Save_MenuInfo();//vincent@20150919-2  
+    //Save_MenuInfo();//vincent@20150919-2  
 }
 
 UINT32 SysGetFlag(UINT32 uiFlag)
@@ -464,9 +464,7 @@ void SysCheckFlag(void)
     SysLimitFlag(FL_MOVIE_GPS,          0,  GPS_ID_MAX,                 DEFAULT_MOVIE_GPS);
     SysLimitFlag(FL_MOVIE_GSENSOR,      0,  GSENSOR_ID_MAX,          DEFAULT_MOVIE_GSENSOR);
     SysLimitFlag(FL_MOVIE_PARKING,      0,  MOVIE_PARKING_MAX,          DEFAULT_MOVIE_PARKING);
- #if(_MODEL_DSC_ == _MODEL_DUAL_AONI328_)//vincent@20150915-2
-    SysLimitFlag(FL_MOVIE_DUAL_VIEW_MODE, 0, MOVIE_DUAL_VIEW_MAX,       DEFAULT_MOVIE_DUAL_VIEW_MODE);
- #endif
+
     // Playback
     SysLimitFlag(FL_PROTECT,            0,  FILE_PROTECT_ID_MAX,        DEFAULT_PROTECT);
     SysLimitFlag(FL_SLIDE_SHOW,         0,  SLIDE_SHOW_ID_MAX,          DEFAULT_SLIDE_SHOW);
@@ -541,36 +539,6 @@ void SysSetFixedFlag(void)
 #if (_MODEL_DSC_ == _MODEL_CARDV_B50_)
     SysSetFlag(FL_LCDOFF,    DELAYOFF_OFF);
 #endif
-
-    #if(_MODEL_DSC_ == _MODEL_DUAL_AONI328_)//vincent@20150915-2
-    #if (_SENSORLIB2_ != _SENSORLIB2_DUMMY_)		
-		if (Sensor_CheckExtSensor())
-		{
-		    if(SysGetFlag(FL_MOVIE_DUAL_REC))
-		    {
-                switch(SysGetFlag(FL_MOVIE_DUAL_VIEW_MODE))
-                {
-                    case MOVIE_DUAL_VIEW_1T1S2B:
-                        PipView_SetStyle(PIP_STYLE_1T1S2B);
-                        break;
-                    case MOVIE_DUAL_VIEW_2T1B2S:
-                        PipView_SetStyle(PIP_STYLE_2T1B2S);
-                        break;
-                    case MOVIE_DUAL_VIEW_1T1F:
-                        PipView_SetStyle(PIP_STYLE_1T1F);
-                        break;
-                    case MOVIE_DUAL_VIEW_2T2F:
-                    default:
-                        PipView_SetStyle(PIP_STYLE_2T2F);
-                        break;
-                }
-		    }
-		}
-    #endif
-    #endif
-
-    
-    
     //SysSetFlag(FL_OPENING_LOGO,         DEFAULT_OPENING_LOGO);
 
 }
@@ -615,10 +583,6 @@ void SysResetFlag(void)
     SysSetFlag(FL_MOVIE_GPS,            DEFAULT_MOVIE_GPS);
     SysSetFlag(FL_MOVIE_GSENSOR,        DEFAULT_MOVIE_GSENSOR);
     SysSetFlag(FL_MOVIE_PARKING,        DEFAULT_MOVIE_PARKING);
-    
- #if(_MODEL_DSC_ == _MODEL_DUAL_AONI328_)//vincent@20150915-2
-    SysSetFlag(FL_MOVIE_DUAL_VIEW_MODE, DEFAULT_MOVIE_DUAL_VIEW_MODE);
- #endif
 
     // Playback
     SysSetFlag(FL_PROTECT,              DEFAULT_PROTECT);

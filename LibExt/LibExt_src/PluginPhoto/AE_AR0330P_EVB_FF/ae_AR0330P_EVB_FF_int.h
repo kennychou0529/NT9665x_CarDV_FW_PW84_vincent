@@ -37,7 +37,7 @@
 //#define AE_EXPECT_Y                 (37<<4)                     ///< expectY
 //#define AE_EXPECT_Y                 (40<<4)                     ///< expectY
 //#define AE_EXPECT_Y                 (30<<4)                     ///< expectY
-#define AE_EXPECT_Y                 (32<<4)                     ///< expectY
+#define AE_EXPECT_Y                 (35<<4)                     ///< expectY
 #define AE_MAX_ISO                  900                         ///< max iso
 #define AE_MIN_ISO                  50                          ///< min iso
 
